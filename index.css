@@ -1,0 +1,75 @@
+body{
+    background-image: url(./pexels-roger-ce-311041755-15925200.jpg);
+    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.time-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    color: white;
+}
+.flip-clock {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 8rem;
+    color: white;
+}
+
+.flip-unit {
+    width: 11rem;
+    height: 11rem;
+    background: linear-gradient(to bottom, #444, #222);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    opacity:0.7;
+}
+
+
+.time-button{
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(255, 253, 253);
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer;
+    background: linear-gradient(to bottom, #444, #222); /* Degradado */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity:0.7;
+}
+
+.config-page{
+
+    position: fixed;
+    bottom: 8px;
+    right: 16px;
+    display:flex;
+    align-items: center;
+    justify-content: right;
+    flex-direction: row;
+    Gap:0.5rem;
+    color:rgb(5, 5, 5);
+}
+p{
+    text-decoration: underline;
+    color:white;
+}
+.icons-config-page{
+    background-color: white;
+    width: 1rem;
+    height: 1rem;
+}
