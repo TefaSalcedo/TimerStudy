@@ -4,26 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Focus-timer</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/x-icon" href="./watchpocket.png">
+    <link rel="stylesheet" href="./src/app.css">
+    <link rel="icon" type="image/x-icon" href="./src/assets/watchpocket.png">
 </head>
 <body>
-    <div class="time-container">
-        <div class="flip-clock">
-            <div class="flip-unit" id="hours">00</div>
-            <div class="flip-unit" id="minutes">00</div>
-        </div>
-        <div class="time-options">
-            <button class="time-button" id="RealTime">Real Time</button>
-            <button class="time-button" id="pomodoroButton">Pomodoro</button>
-            <button class="time-button" id="deepWorkButton">Deep Work</button>
-        </div>
-    </div>
-    <div class="config-page">
-        <p>background</p>
-        <img class="icons-config-page" src="./new-tab.png" alt="newtab" >
-        <img class="icons-config-page" src="./expand-window.png" alt="newtab" >
-    </div>
-    <script src="index.js"></script>
+    <div id="app"></div>
+    <script type="module" src="./src/main.jsx"></script>
 </body>
 </html>

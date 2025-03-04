@@ -1,0 +1,13 @@
+body{
+    height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
+
+    background-image: url(./assets/pexels-roger-ce-311041755-15925200.jpg);
+    background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

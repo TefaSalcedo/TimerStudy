@@ -1,0 +1,18 @@
+.flip-clock {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 8rem;
+    color: white;
+}
+.flip-unit {
+    width: 11rem;
+    height: 11rem;
+    background: linear-gradient(to bottom, #444, #222);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    opacity:0.7;
+}
