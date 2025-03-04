@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import Draggable from "react-draggable";
+
 import DeepWorkOptions from './Deep Work/deepWorkOption.jsx';
 import TimeOptions from './Display/timeOption.jsx';
 import TimeDisplay from './Display/timeDisplay.jsx';
-import PomodoroOptions from './Pomodoro/pomodoro.jsx';
-import DraggableComponent from './Drag Component/draggable.jsx';
+import PomodoroOptions from './Pomodoro/pomodoro.jsx'
+
 import "./appTime.css";
 import "./Display/timeDisplay.css";
 import "./Display/timeOption.css";
@@ -75,23 +77,25 @@ function TimeComponent() {
 
   return (
     // Contenedor principal
-    <div className="time-container">
-      <DeepWorkOptions/>
-      <div className="app-cointainer"> 
-      
-        {/* Muestra la hora usando el componente TimeDisplay */}
-        <TimeDisplay hours={hours} minutes={minutes} />
-        {/* Muestra los botones de opciones usando el componente TimeOptions */}
-        <TimeOptions
-          onRealTimeClick={handleRealTimeClick}
-          onPomodoroClick={handlePomodoroClick}
-          onDeepWorkClick={handleDeepWorkClick}
-          onClearClick={handleClearClick}
-        />
+     <Draggable axis="y">  
+     {/* npm i react-draggable react drag Permite arrastrar el componente verticalmente eje y */}
+      <div className="time-container">
+        <DeepWorkOptions/>
+        <div className="app-cointainer"> 
+        
+          {/* Muestra la hora usando el componente TimeDisplay */}
+          <TimeDisplay hours={hours} minutes={minutes} />
+          {/* Muestra los botones de opciones usando el componente TimeOptions */}
+          <TimeOptions
+            onRealTimeClick={handleRealTimeClick}
+            onPomodoroClick={handlePomodoroClick}
+            onDeepWorkClick={handleDeepWorkClick}
+            onClearClick={handleClearClick}
+          />
+        </div>
+        <PomodoroOptions/>
       </div>
-      <PomodoroOptions/>
-      <DraggableComponent/>
-    </div>
+      </Draggable>
   );
 }
 

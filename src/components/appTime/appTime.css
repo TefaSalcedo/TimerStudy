@@ -4,8 +4,7 @@ APP DISPLAY */
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    background-color: bisque;
-    height: 100vh;
+    cursor:grab;
 }
 .app-cointainer{
     display: flex;
