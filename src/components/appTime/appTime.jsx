@@ -3,6 +3,7 @@ import DeepWorkOptions from './Deep Work/deepWorkOption.jsx';
 import TimeOptions from './Display/timeOption.jsx';
 import TimeDisplay from './Display/timeDisplay.jsx';
 import PomodoroOptions from './Pomodoro/pomodoro.jsx';
+import DraggableComponent from './Drag Component/draggable.jsx';
 import "./appTime.css";
 import "./Display/timeDisplay.css";
 import "./Display/timeOption.css";
@@ -89,6 +90,7 @@ function TimeComponent() {
         />
       </div>
       <PomodoroOptions/>
+      <DraggableComponent/>
     </div>
   );
 }
