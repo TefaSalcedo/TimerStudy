@@ -18,14 +18,14 @@ function TimeComponent() {
   const [seconds, setSeconds] = useState('00');
   // Estado para controlar si el reloj está en tiempo real (inicializado a falso)
   const [isRealTime, setIsRealTime] = useState(false);
+  
   // Estado para controlar el modo del temporizador ('none', 'pomodoro', 'deepWork')
   const [timerMode, setTimerMode] = useState('none');
   const [isCounting, setIsCounting] = useState(false);
   const [timeLeft, setTimeLeft] = useState(0);
+
   const [showDeepWorkOptions, setShowDeepWorkOptions] = useState(false);
   const [showPomodoroOptions, setShowPomodoroOptions] = useState(false);
-  // Estado para guardar el tiempo restante en el caché
-  const [cachedTimeLeft, setCachedTimeLeft] = useState(0); 
 
   // Función para actualizar la hora actual
   const updateClock = () => {
@@ -37,7 +37,7 @@ function TimeComponent() {
 
   // Efecto para actualizar el reloj en tiempo real cada segundo
     useEffect(() => {
-      let intervalId;// Si isRealTime es verdadero, actualiza el reloj cada segundo
+      let intervalId;
       if (isRealTime) {
         updateClock(); // Actualiza inmediatamente la primera vez
         intervalId = setInterval(updateClock, 1000); // Actualiza cada segundo
@@ -87,10 +87,6 @@ function TimeComponent() {
     };
   
     const startCountdown = () => {
-      if (cachedTimeLeft > 0) {
-        setTimeLeft(cachedTimeLeft);
-        setCachedTimeLeft(0);
-      }
       if (timeLeft > 0) {
         setIsCounting(true);
       }
@@ -98,7 +94,6 @@ function TimeComponent() {
 
     const pauseCountdown = () => {
       setIsCounting(false);
-      setCachedTimeLeft(timeLeft); // Guarda el tiempo restante en el caché
     };
 
   // Manejador para el botón "Real Time"
@@ -116,6 +111,12 @@ function TimeComponent() {
     setIsRealTime(false); // Detiene el reloj en tiempo real
     setShowDeepWorkOptions(false);
     setShowPomodoroOptions(prevState => !prevState);
+    if (!showPomodoroOptions) {
+      setHours('00'); // Restablece las horas a '00'
+      setMinutes('00'); // Restablece los minutos a '00'
+      setSeconds('00'); // Restablece los segundos a '00'
+      setTimeLeft(0); // Reinicia el tiempo restante
+    }
   };
 
   // Manejador para el botón "Deep Work"
@@ -124,6 +125,12 @@ function TimeComponent() {
     setIsRealTime(false); // Detiene el reloj en tiempo real
     setShowDeepWorkOptions(prevState => !prevState);
     setShowPomodoroOptions(false);
+    if (!showDeepWorkOptions) {
+      setHours('00'); // Restablece las horas a '00'
+      setMinutes('00'); // Restablece los minutos a '00'
+      setSeconds('00'); // Restablece los segundos a '00'
+      setTimeLeft(0); // Reinicia el tiempo restante
+    }
   };
 
   // Manejador para el botón "Clear"
@@ -135,7 +142,6 @@ function TimeComponent() {
     setMinutes('00'); // Restablece los minutos a '00'
     setSeconds('00'); // Restablece los segundos a '00'
     setTimeLeft(0); // Reinicia el tiempo restante
-    setCachedTimeLeft(0); // Reinicia el tiempo en el caché
     setShowDeepWorkOptions(false);
     setShowPomodoroOptions(false);
   };
