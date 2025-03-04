@@ -2,22 +2,28 @@
 APP DISPLAY */
 .time-container {
     display: flex;
+    position: relative;
     flex-direction: row-reverse;
     align-items: center;
     cursor:grab;
+    gap:2rem;
 }
+.hidden {
+    visibility: hidden;
+  }
 .app-cointainer{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:20px;
+    gap: 2rem;
     color: white;
 }
 .option-button{
     display: flex;
     flex-direction: row;
     padding: 10px 20px;
+    margin-bottom: 0.5rem;
     font-size: 16px;
     font-weight: bold;
     color: rgb(255, 253, 253);
@@ -25,12 +31,11 @@ APP DISPLAY */
     border-radius: 25px; /* Bordes redondeados */
     cursor: pointer;
     background: linear-gradient(to bottom, #444, #222); /* Degradado */
-    transition: all 0.3s ease-in-out;
+  
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     opacity:0.7;
 }
 .time-buttons{
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
 }

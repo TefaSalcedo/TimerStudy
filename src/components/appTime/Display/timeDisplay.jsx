@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TimeDisplay({ hours, minutes }) {
+function TimeDisplay({ hours, minutes,seconds }) {
   return (
     <div className="flip-clock">
       <div className="flip-unit" id="hours">
@@ -8,6 +8,9 @@ function TimeDisplay({ hours, minutes }) {
       </div>
       <div className="flip-unit" id="minutes">
         {minutes}
+      </div>
+      <div className="flip-unit" id="seconds">
+        {seconds}
       </div>
     </div>
   );
