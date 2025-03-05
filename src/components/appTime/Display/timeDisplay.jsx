@@ -1,4 +1,5 @@
 import React from 'react';
+import "./timeDisplay.css";
 
 function TimeDisplay({ hours, minutes,seconds }) {
   return (
