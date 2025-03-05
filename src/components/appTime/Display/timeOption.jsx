@@ -1,4 +1,5 @@
 import React from 'react';
+import "./timeOption.css";
 
 function TimeOptions({ onRealTimeClick, onPomodoroClick, onDeepWorkClick, onClearClick }) {
   return (
