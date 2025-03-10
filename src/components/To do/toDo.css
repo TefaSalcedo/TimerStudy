@@ -1,0 +1,45 @@
+/* appTime.css */
+.to-do-Menu {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+  }
+  
+  .to-do-list-item{
+    display: flex;
+    width: 18rem;
+    height: 2.5rem;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: rgb(255, 253, 253);
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer;
+    background: linear-gradient(to bottom, #444, #222); /* Degradado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity:0.7;
+}
+
+.hamburger-button{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px;
+    margin-bottom: 0.5rem;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(255, 253, 253);
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer;
+    background: linear-gradient(to bottom, #444, #222); /* Degradado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity:0.7;
+}
+  .to-do-list {
+    margin-top: 10px;
+  }

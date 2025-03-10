@@ -5,6 +5,7 @@ import TimeDisplay from './appTime/Display/timeDisplay.jsx';
 import PomodoroOptions from './appTime/Pomodoro/pomodoro.jsx'
 import DeepWorkOptions from './appTime/Deep Work/deepWorkOption.jsx';
 import Quote from './Quotes/quote.jsx';
+import MenuEditable from './To do/toDo.jsx';
 import "./appTime.css";
 
 function TimeComponent() {
@@ -149,7 +150,10 @@ function TimeComponent() {
  
   return (
     // Contenedor principal
-   
+    <div className="app-container"> 
+     <div className="app-left">
+      <MenuEditable />
+     </div>
       <Draggable axis="y">  
        <div className="app-center">
         {/* Contenedor para time*/}
@@ -162,7 +166,7 @@ function TimeComponent() {
               pauseDeepWork={pauseCountdown} // Pausa el temporizador
             />
           </div>
-          <div className="app-cointainer"> 
+          <div className="app-clock"> 
               {/* Muestra la hora usando el componente TimeDisplay */}
               <TimeDisplay hours={hours} minutes={minutes} seconds={seconds}/>
               {/* Muestra los botones de opciones usando el componente TimeOptions */}
@@ -187,8 +191,10 @@ function TimeComponent() {
           <Quote />
         </div>
         </Draggable>
-     
-    
+      <div className="app-rigth">
+        <p>Hola</p>
+      </div>
+    </div>
   );
 }
 
