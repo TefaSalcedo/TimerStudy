@@ -1,9 +1,32 @@
 /* Estilos para el componente appTime
 APP DISPLAY */
+.app-container{
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.app-left{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.app-right{
+    display: flex;
+    background-color: rgb(163, 6, 6);
+}
+.app-center{
+    display:flex;
+    align-self: center;
+    align-items: center;
+    flex-direction: column;
+}
 .time-container {
     display: flex;
     position: relative;
     flex-direction: row-reverse;
+    align-self: center;
     align-items: center;
     cursor:grab;
     gap:2rem;
@@ -11,7 +34,8 @@ APP DISPLAY */
 .hidden {
     visibility: hidden;
   }
-.app-cointainer{
+
+.app-clock{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,6 +43,7 @@ APP DISPLAY */
     gap: 2rem;
     color: white;
 }
+
 .option-button{
     display: flex;
     flex-direction: row;
@@ -31,7 +56,6 @@ APP DISPLAY */
     border-radius: 25px; /* Bordes redondeados */
     cursor: pointer;
     background: linear-gradient(to bottom, #444, #222); /* Degradado */
-  
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     opacity:0.7;
 }
