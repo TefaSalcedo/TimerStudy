@@ -28,13 +28,15 @@
 .hamburger-button{
     display: flex;
     flex-direction: row;
-    padding: 10px 10px;
+    align-items: center;
+    justify-content: center; 
+    padding: 10px;
     margin-bottom: 0.5rem;
     font-size: 35px;
     font-weight: bold;
     color: rgb(255, 253, 253);
     border: none;
-    border-radius: 25px; /* Bordes redondeados */
+    border-radius: 10px; /* Bordes redondeados */
     cursor: pointer;
     background: linear-gradient(to bottom, #444, #222); /* Degradado */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
