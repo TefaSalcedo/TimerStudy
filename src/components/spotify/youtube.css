@@ -1,48 +1,59 @@
-.youtube-videos {
-  font-family: sans-serif;
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-.draggable-iframe {
+.youtube-container {
   position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 1000;
-  cursor: move;
-  border: 1px solid #ddd;
+  bottom:10px;
+  left: 10px;
+  width: 420px;
+  height: 45%;
   border-radius: 8px;
+
   overflow: hidden;
 }
 
-.loading-video {
-  text-align: center;
-  font-style: italic;
-  color: #888;
+.iframe-container {
+  margin: 10px;
 }
 
 .youtube-button {
+  background: none;
   position: fixed;
-  top: 10px;
   left: 10px;
+  bottom: 10px;
   z-index: 1001;
+  border: none;
+  cursor: pointer;
+
+}
+
+.youtube-button img {
+  position: fixed;
+  bottom: 10px;
+  width: 50px;
+  height: 40px;
+}
+
+.form-toggle-buttons {
+  position: absolute;
+  bottom: 35px;
+  right: 10px;
+  z-index: 1002;
+}
+
+.toggle-button {
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.youtube-button img {
-  width: 50px;
-  height: 50px;
+.toggle-button img {
+  width: 10px;
+  height: 10px;
 }
 
 .search-form {
-  display: flex;
-  justify-content: center;
-  margin-top: 10px;
+  position:absolute;
+  bottom: 5px;
+  right: 10px;
+  overflow: hidden;
 }
 
 .search-input {

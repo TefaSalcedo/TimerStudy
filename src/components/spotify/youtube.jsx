@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Draggable from 'react-draggable';
 import axios from 'axios';
-import { Resizable } from 're-resizable';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faYoutube } from '@fortawesome/free-brands-svg-icons'; // Importar el ícono de YouTub
+import { EyeClosed, Eye } from 'lucide-react'; // Importar íconos de Lucide
 import "./youtube.css";
 
 const YoutubeSpecificVideo = () => {
@@ -9,6 +10,7 @@ const YoutubeSpecificVideo = () => {
   const [videoId, setVideoId] = useState('1-MJcO-vCts'); // Video ID por defecto
   const [showVideo, setShowVideo] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
+  const [showForm, setShowForm] = useState(true); // Estado para mostrar/ocultar el formulario
   const apiKey = import.meta.env.VITE_API_KEY;
 
   useEffect(() => {
@@ -42,6 +44,10 @@ const YoutubeSpecificVideo = () => {
     setShowVideo(!showVideo);
   };
 
+  const toggleForm = () => {
+    setShowForm(!showForm); // Alternar la visibilidad del formulario
+  };
+
   if (!video && showVideo) {
     return <div className="loading-video">Cargando video...</div>;
   }
@@ -49,39 +55,44 @@ const YoutubeSpecificVideo = () => {
   return (
     <div>
       <button className="youtube-button" onClick={toggleVideo}>
-        <img src="youtube-logo.png" alt="YouTube" />
+      <FontAwesomeIcon icon={faYoutube}  size="3x" style={{color:"#c4302b"}} />
       </button>
       {showVideo && (
-        <div>
-          <form onSubmit={handleSearch} className="search-form">
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder="Enter YouTube Video ID"
-              className="search-input"
-            />
-            <button type="submit" className="search-button">Search</button>
-          </form>
-          <Draggable>
-            <Resizable
-              defaultSize={{
-                width: 300,
-                height: 200,
-              }}
-              className="draggable-iframe"
-            >
-              <iframe
-                width="100%"
-                height="100%"
-                src={`https://www.youtube.com/embed/${videoId}`}
-                title="YouTube video player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </Resizable>
-          </Draggable>
+        <div className="youtube-container">
+          <div className="form-toggle-buttons">
+          {!showForm ? (
+              <button className="toggle-button" onClick={toggleForm}>
+                <Eye color="#808080" />
+              </button>
+            ) : (
+              <button className="toggle-button" onClick={toggleForm}>
+                <EyeClosed color="#808080" />
+              </button>
+            )}
+          </div>
+          {showForm && (
+            <form onSubmit={handleSearch} className="search-form">
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Enter YouTube Video ID"
+                className="search-input"
+              />
+              <button type="submit" className="search-button">Search</button>
+            </form>
+          )}
+          <div className="iframe-container">
+            <iframe
+              width="400"
+              height="250"
+              src={`https://www.youtube.com/embed/${videoId}?enablejsapi=1`}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       )}
     </div>
