@@ -5,6 +5,7 @@ import TimeDisplay from './appTime/Display/timeDisplay.jsx';
 import PomodoroOptions from './appTime/Pomodoro/pomodoro.jsx'
 import DeepWorkOptions from './appTime/Deep Work/deepWorkOption.jsx';
 import YoutubeSpecificVideo from '../components/spotify/youtube.jsx';
+import SettingsPanel from './controles/controles.jsx';
 import Quote from './Quotes/quote.jsx';
 import MenuEditable from './To do/toDo.jsx';
 import "./appTime.css";
@@ -153,6 +154,7 @@ function TimeComponent() {
     // Contenedor principal
     <div className="app-container"> 
      <div className="app-left">
+     <YoutubeSpecificVideo videoId="1-MJcO-vCts" />
       <MenuEditable />
      </div>
       <Draggable axis="y">  
@@ -193,7 +195,7 @@ function TimeComponent() {
         </div>
         </Draggable>
       <div className="app-rigth">
-        <YoutubeSpecificVideo videoId="1-MJcO-vCts" />
+        <SettingsPanel />
       </div>
     </div>
   );

@@ -11,8 +11,9 @@ APP DISPLAY */
     display: flex;
     flex-direction: column;
     align-items: left;
+
 }
-.app-right{
+.app-rigth{
     display: flex;
     background-color: rgb(163, 6, 6);
 }
