@@ -1,6 +1,6 @@
 body{
     height: 100vh; /* Ocupa el 100% de la altura de la pantalla */
-    width: 100%; /* Ocupa el 100% de la altura de la pantalla */
+    width: 100; /* Ocupa el 100% de la altura de la pantalla */
     background-image: url(./assets/photo-1616449973117-0e1d99c56ed3.avif);
     background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla*/
     background-position: center; /* Centra la imagen */

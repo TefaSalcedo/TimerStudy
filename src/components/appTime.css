@@ -1,6 +1,8 @@
 /* Estilos para el componente appTime
 APP DISPLAY */
 .app-container{
+    display: fixed;
+    top:0;
     width: 100vw;
     height: 100vh;
     display:flex;
@@ -8,14 +10,20 @@ APP DISPLAY */
     justify-content: space-around;
 }
 .app-left{
+    position:fixed;
+    top:0;
+    left:0;
     display: flex;
     flex-direction: column;
     align-items: left;
 
 }
 .app-rigth{
+    position:fixed;
+    top: 0;
+    right:0;
+    height: 100vh;
     display: flex;
-    background-color: rgb(163, 6, 6);
 }
 .app-center{
     display:flex;

@@ -1,48 +1,96 @@
 .settings-container {
-    position: fixed;
-    top: 50%;
-    right:0%;
-    transform: translateY(-50%);
-  }
-  
-  .settings-icon {
-    background-color: #374151; /* Gris oscuro */
-    color: white;
-    padding: 8px;
-    border-radius: 8px 0 0 8px;
-    cursor: pointer;
-  }
-  
-  .settings-panel {
-    position: absolute;
-    top: 0;
-    right: 40px;
-    width: 160px;
-    background-color: white;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 12px;
-  }
-  
-  .panel-title {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 8px;
-  }
-  
-  .panel-options {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .panel-options li {
-    padding: 8px;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  
-  .panel-options li:hover {
-    background-color: #f3f4f6; /* Gris claro */
-  }
-  
+  position: relative;
+}
+
+.settings-icon {
+  position: fixed;
+  bottom: 25px;
+  right: 0;
+  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
+  color: white;
+  padding: 8px;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+ 
+}
+
+.settings-panel {
+  position: absolute;
+  bottom: 105px;
+  right: 0;
+  width: 180px;
+  background-color: rgba(55, 65, 81, 0.8); /* Gris oscuro con transparencia */
+  color: white;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.panel-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.panel-options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.panel-item {
+  display: flex;
+  justify-content: space-between; /* Alinear texto e interruptor */
+  align-items: center; /* Centrar verticalmente */
+  margin-bottom: 10px;
+  font-size: 14px; /* Tamaño de fuente */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 34px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #91cb92; /* Verde cuando está activado */
+}
+
+input:checked + .slider:before {
+  transform: translateX(14px);
+}
+
+span{
+  font-size: medium;
+}

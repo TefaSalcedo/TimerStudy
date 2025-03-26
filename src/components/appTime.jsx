@@ -11,22 +11,27 @@ import MenuEditable from './To do/toDo.jsx';
 import "./appTime.css";
 
 function TimeComponent() {
-  // Estado para las horas (inicializado a '00')
+  // Estados para la hora actual
   const [hours, setHours] = useState('00');
   const [minutes, setMinutes] = useState('00');
   const [seconds, setSeconds] = useState('00');
-  // Estado para controlar si el reloj está en tiempo real (inicializado a falso)
-  const [isRealTime, setIsRealTime] = useState(false);
-  // Estado para controlar el modo del temporizador ('none', 'pomodoro', 'deepWork')
+
+  // Otros estados relacionados con el temporizador
+  const [isRealTime, setIsRealTime] = useState(true);
   const [timerMode, setTimerMode] = useState('none');
-  // Estado para controlar si se está contando (inicializado a falso)
   const [isCounting, setIsCounting] = useState(false);
-  // Estado para controlar el tiempo restante (inicializado a 0)
   const [timeLeft, setTimeLeft] = useState(0);
+
   // Estado para visualizar opciones de Pomodoro y Deep Work
   const [showDeepWorkOptions, setShowDeepWorkOptions] = useState(false);
   const [showPomodoroOptions, setShowPomodoroOptions] = useState(false);
- 
+
+  // Estados para controlar la visibilidad de los componentes
+  const [showQuote, setShowQuote] = useState(true);
+  const [showToDo, setShowToDo] = useState(true);
+  const [showMusic, setShowMusic] = useState(true);
+  const [showClockButtons, setShowClockButtons] = useState(false);
+
 
   // Función para actualizar la hora actual
   const updateClock = () => {
@@ -55,6 +60,10 @@ function TimeComponent() {
       setIsRealTime(false); // Detiene el reloj en tiempo real
     }
   }, [timerMode]);
+  
+  useEffect(() => {
+    handleRealTimeClick(); // Activa el reloj en tiempo real al cargar la página
+  }, []);
   
   // Efecto para manejar el temporizador de cuenta regresiva
   useEffect(() => {
@@ -154,8 +163,8 @@ function TimeComponent() {
     // Contenedor principal
     <div className="app-container"> 
      <div className="app-left">
-     <YoutubeSpecificVideo videoId="1-MJcO-vCts" />
-      <MenuEditable />
+        {showMusic && <YoutubeSpecificVideo videoId="1-MJcO-vCts" />}
+        {showToDo && <MenuEditable />}
      </div>
       <Draggable axis="y">  
        <div className="app-center">
@@ -173,12 +182,14 @@ function TimeComponent() {
               {/* Muestra la hora usando el componente TimeDisplay */}
               <TimeDisplay hours={hours} minutes={minutes} seconds={seconds}/>
               {/* Muestra los botones de opciones usando el componente TimeOptions */}
-              <TimeOptions
-                onRealTimeClick={handleRealTimeClick}
-                onPomodoroClick={handlePomodoroClick}
-                onDeepWorkClick={handleDeepWorkClick}
-                onClearClick={handleClearClick}
-              />
+              {showClockButtons && (
+                <TimeOptions
+                  onRealTimeClick={handleRealTimeClick}
+                  onPomodoroClick={handlePomodoroClick}
+                  onDeepWorkClick={handleDeepWorkClick}
+                  onClearClick={handleClearClick}
+                />
+              )}
           </div>
           <div className={showPomodoroOptions ? '' : 'hidden'}>
             <PomodoroOptions
@@ -191,11 +202,17 @@ function TimeComponent() {
           
         </div>
           {/* Contenedor para quotes*/}
-          <Quote />
+          {showQuote && <Quote />}
+          
         </div>
         </Draggable>
       <div className="app-rigth">
-        <SettingsPanel />
+          <SettingsPanel
+            onToggleQuote={() => setShowQuote(prev => !prev)}
+            onToggleToDo={() => setShowToDo(prev => !prev)}
+            onToggleMusic={() => setShowMusic(prev => !prev)}
+            onToggleClockButtons={() => setShowClockButtons(prev => !prev)}
+            />
       </div>
     </div>
   );
