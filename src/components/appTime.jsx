@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Draggable from "react-draggable";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import TimeOptions from './appTime/Display/timeOption.jsx';
 import TimeDisplay from './appTime/Display/timeDisplay.jsx';
 import PomodoroOptions from './appTime/Pomodoro/pomodoro.jsx'
@@ -159,6 +161,20 @@ function TimeComponent() {
     setShowPomodoroOptions(false);
   };
  
+    // Efecto para mostrar notificaciones en momentos específicos
+
+  useEffect(() => {
+    if (timeLeft === 600) {
+      toast.info("Quedan 10 minutos", { position: "top-right" });
+    } else if (timeLeft === 300) {
+      toast.info("Quedan 5 minutos", { position: "top-right" });
+    } else if (timeLeft === 180) {
+      toast.info("Quedan 3 minutos", { position: "top-right" });
+    } else if (timeLeft === 60) {
+      toast.info("Queda 1 minuto", { position: "top-right" });
+    }
+  }, [timeLeft]);
+
   return (
     // Contenedor principal
     <div className="app-container"> 
@@ -207,6 +223,7 @@ function TimeComponent() {
         </div>
         </Draggable>
       <div className="app-rigth">
+        <ToastContainer /> {/* Contenedor para las notificaciones */}
           <SettingsPanel
             onToggleQuote={() => setShowQuote(prev => !prev)}
             onToggleToDo={() => setShowToDo(prev => !prev)}
