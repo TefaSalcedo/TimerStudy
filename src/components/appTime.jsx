@@ -34,6 +34,8 @@ function TimeComponent() {
   const [showMusic, setShowMusic] = useState(true);
   const [showClockButtons, setShowClockButtons] = useState(false);
 
+  //background
+  const [backgroundImage, setBackgroundImage] = useState("");
 
   // Función para actualizar la hora actual
   const updateClock = () => {
@@ -175,9 +177,20 @@ function TimeComponent() {
     }
   }, [timeLeft]);
 
+  //Background 
+  useEffect(() => {
+    // Asigna una imagen aleatoria de Lorem Picsum
+    setBackgroundImage(`https://picsum.photos/1920/1080?random=${Math.random()}`);
+  }, []);
+
   return (
     // Contenedor principal
-    <div className="app-container"> 
+    <div 
+      className="app-container" 
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+      }}
+    > 
      <div className="app-left">
         {showMusic && <YoutubeSpecificVideo videoId="1-MJcO-vCts" />}
         {showToDo && <MenuEditable />}
