@@ -8,6 +8,16 @@ APP DISPLAY */
     display:flex;
     flex-direction: row;
     justify-content: space-around;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);  
 }
 .app-left{
     position:fixed;
@@ -16,6 +26,7 @@ APP DISPLAY */
     display: flex;
     flex-direction: column;
     align-items: left;
+    z-index: 100;
 
 }
 .app-rigth{
@@ -24,12 +35,14 @@ APP DISPLAY */
     right:0;
     height: 100vh;
     display: flex;
+    z-index: 100;
 }
 .app-center{
     display:flex;
     align-self: center;
     align-items: center;
     flex-direction: column;
+    z-index: 100;
 }
 .time-container {
     display: flex;
