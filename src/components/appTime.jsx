@@ -10,6 +10,7 @@ import YoutubeSpecificVideo from '../components/spotify/youtube.jsx';
 import SettingsPanel from './controles/controles.jsx';
 import Quote from './Quotes/quote.jsx';
 import MenuEditable from './To do/toDo.jsx';
+import Themes from './themes/themes.js'; // Importa el archivo de temas
 import "./appTime.css";
 
 function TimeComponent() {
@@ -34,8 +35,9 @@ function TimeComponent() {
   const [showMusic, setShowMusic] = useState(true);
   const [showClockButtons, setShowClockButtons] = useState(false);
 
-  //background
-  const [backgroundImage, setBackgroundImage] = useState("");
+  // Estados para controlar el tema de la aplicación
+  const [selectedTheme, setSelectedTheme] = useState("Morning");
+
 
   // Función para actualizar la hora actual
   const updateClock = () => {
@@ -177,28 +179,30 @@ function TimeComponent() {
     }
   }, [timeLeft]);
 
-  //Background 
-  useEffect(() => {
-    // Asigna una imagen aleatoria de Lorem Picsum
-    setBackgroundImage(`https://picsum.photos/1920/1080?random=${Math.random()}`);
-  }, []);
-
+ 
   return (
     // Contenedor principal
-    <div 
-      className="app-container" 
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-      }}
-    > 
+      <div
+        className="app-container"
+        style={{
+          backgroundImage: Themes[selectedTheme]?.backgroundImage
+            ? `url(${Themes[selectedTheme].backgroundImage})`
+            : "none", // Usa un valor predeterminado si el tema no es válido
+        }}
+      >
      <div className="app-left">
-        {showMusic && <YoutubeSpecificVideo videoId="1-MJcO-vCts" />}
+        {showMusic && Themes[selectedTheme]?.videoId && (
+              <YoutubeSpecificVideo videoId={Themes[selectedTheme].videoId} />
+        )}
         {showToDo && <MenuEditable />}
      </div>
       <Draggable axis="y">  
        <div className="app-center">
         {/* Contenedor para time*/}
-        <div className="time-container">
+        <div 
+          className="time-container"
+          style={{ color: Themes[selectedTheme].colors.timer }}
+        >
         <div className={showDeepWorkOptions ? '' : 'hidden'}>
             <DeepWorkOptions
               oneHour={() => setTimer(60)}
@@ -209,7 +213,12 @@ function TimeComponent() {
           </div>
           <div className="app-clock"> 
               {/* Muestra la hora usando el componente TimeDisplay */}
-              <TimeDisplay hours={hours} minutes={minutes} seconds={seconds}/>
+              <TimeDisplay
+                hours={hours}
+                minutes={minutes}
+                seconds={seconds}
+                style={{ color: Themes[selectedTheme].colors.clock }}
+              />
               {/* Muestra los botones de opciones usando el componente TimeOptions */}
               {showClockButtons && (
                 <TimeOptions
@@ -217,6 +226,10 @@ function TimeComponent() {
                   onPomodoroClick={handlePomodoroClick}
                   onDeepWorkClick={handleDeepWorkClick}
                   onClearClick={handleClearClick}
+                  style={{
+                    backgroundColor: Themes[selectedTheme].colors.buttons,
+                    color: "#fff",
+                  }}
                 />
               )}
           </div>
@@ -235,14 +248,22 @@ function TimeComponent() {
           
         </div>
         </Draggable>
+
       <div className="app-rigth">
         <ToastContainer /> {/* Contenedor para las notificaciones */}
-          <SettingsPanel
-            onToggleQuote={() => setShowQuote(prev => !prev)}
-            onToggleToDo={() => setShowToDo(prev => !prev)}
-            onToggleMusic={() => setShowMusic(prev => !prev)}
-            onToggleClockButtons={() => setShowClockButtons(prev => !prev)}
-            />
+        <SettingsPanel
+          onToggleQuote={() => setShowQuote((prev) => !prev)}
+          onToggleToDo={() => setShowToDo((prev) => !prev)}
+          onToggleMusic={() => setShowMusic((prev) => !prev)}
+          onToggleClockButtons={() => setShowClockButtons((prev) => !prev)}
+          onThemeChange={(theme) => {
+            if (Themes[theme]) {
+              setSelectedTheme(theme);
+            } else {
+              console.error(`El tema "${theme}" no existe en Themes.`);
+            }
+          }}
+        />
       </div>
     </div>
   );
