@@ -4,7 +4,7 @@ import "./controles.css"; // Importamos el archivo de estilos
 
 const SettingsPanel = ({ onToggleQuote, onToggleToDo, onToggleMusic, onToggleClockButtons, onThemeChange }) => {
   const [isPanelOpen, setIsPanelOpen] = useState(false); // Estado para controlar la visibilidad del panel
-  const themes = ["Morning", "Autumn", "Cottagecore", "DarkAcademia", "LightAcademia", "Y2K", "CleanGirl"];
+  const themes = ["Morning", "Autumn", "Cottagecore", "DarkAcademia", "LightAcademia", "Y2K", "CleanGirl",  "ParisianChic", "SummerBeach","VanillaAesthetic", "CatVibe", "DogVibe",];
 
   const togglePanel = () => {
     setIsPanelOpen(!isPanelOpen); // Alternar la visibilidad del panel
