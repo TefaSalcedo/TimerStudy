@@ -5,9 +5,8 @@ import { faYoutube } from '@fortawesome/free-brands-svg-icons'; // Importar el Ã
 import { EyeClosed, Eye } from 'lucide-react'; // Importar Ã­conos de Lucide
 import "./youtube.css";
 
-const YoutubeSpecificVideo = () => {
+const YoutubeSpecificVideo = ({ videoId }) => {
   const [video, setVideo] = useState(null);
-  const [videoId, setVideoId] = useState('y29kmnhjtc8'); // Video ID por defecto
   const [showVideo, setShowVideo] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [showForm, setShowForm] = useState(true); // Estado para mostrar/ocultar el formulario
@@ -36,7 +35,7 @@ const YoutubeSpecificVideo = () => {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchTerm) {
-      setVideoId(searchTerm);
+      console.log("Buscando nuevo video con ID:", searchTerm);
     }
   };
 

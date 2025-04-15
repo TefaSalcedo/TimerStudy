@@ -179,7 +179,9 @@ function TimeComponent() {
     }
   }, [timeLeft]);
 
- 
+  console.log("Tema seleccionado:", selectedTheme);
+  console.log("Video ID:", Themes[selectedTheme]?.videoId);
+  
   return (
     // Contenedor principal
       <div

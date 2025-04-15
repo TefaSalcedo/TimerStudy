@@ -16,7 +16,7 @@ import DogVibe from "../../assets/background/Dog.jpg";
 const Themes = {
     Morning: {
       backgroundImage: Morning,
-      videoId: "UmrEX4ikUw8&t=10s",
+      videoId: "ntT1PBjEc74",
       colors: {
         timer: "#FFD700", // Amarillo dorado (energía matutina)
         clock: "#FFA500", // Naranja cálido (amanecer)
@@ -25,7 +25,7 @@ const Themes = {
     },
     Autumn: {
       backgroundImage: Autumn,
-      videoId: "WEP5RV86r_M&t=3s",
+      videoId: "WEP5RV86r_M",
       colors: {
         timer: "#FF6347", // Rojo tomate (hojas de otoño)
         clock: "#FF7F50", // Coral (puesta de sol otoñal)
@@ -43,7 +43,7 @@ const Themes = {
     },
     DarkAcademia: {
       backgroundImage: AcademiaDark,
-      videoId: "SllpB3W5f6s",
+      videoId: "UrxlRXKii10",
       colors: {
         timer: "#4B3621", // Marrón oscuro (clásico, serio)
         clock: "#2C2C2C", // Gris oscuro (misterio)
@@ -52,7 +52,7 @@ const Themes = {
     },
     LightAcademia: {
       backgroundImage: AcademiaLight,
-      videoId: "UMuzS3XVho8&t=5260s",
+      videoId: "UMuzS3XVho8",
       colors: {
         timer: "#E8D5B7", // Beige suave (elegante)
         clock: "#C4A484", // Marrón claro (vintage)
@@ -61,7 +61,7 @@ const Themes = {
     },
     Y2K: {
       backgroundImage: Y2K,
-      videoId: "9V63aZmg7Ac", //hyRLuEY2_f8 dificil elección
+      videoId: "zN-sIrZU7MQ", //hyRLuEY2_f8 dificil elección
       colors: {
         timer: "#FF00FF", // Fucsia neón (vibrante)
         clock: "#00FFFF", // Cian eléctrico (futurista)
@@ -70,7 +70,7 @@ const Themes = {
     },
     CleanGirl: {
       backgroundImage: CleanGirl,
-      videoId: "SZLgQ_nVo9w",
+      videoId: "LtH0zuccZJ4",
       colors: {
         timer: "#F5F5F5", // Blanco puro (minimalista)
         clock: "#D3D3D3", // Gris claro (suavidad)
@@ -79,7 +79,7 @@ const Themes = {
     },
     ParisianChic: {
         backgroundImage: ParisianChic, // Imagen elegante de París
-        videoId: "8B9HwsdKKIQ",
+        videoId: "w6KjcavHFrA",
         colors: {
           timer: "#EEDFCC", // Beige cálido (clásico y sofisticado)
           clock: "#A52A2A", // Marrón rojizo (recuerda los techos parisinos)
@@ -88,7 +88,7 @@ const Themes = {
       },
     SummerBeach: {
         backgroundImage: SummerBeach, // Imagen de una playa paradisíaca
-        videoId: "hOyn0bCydZo",
+        videoId: "Ef4ysbY_hM4",
         colors: {
           timer: "#FFD700", // Amarillo sol (energía veraniega)
           clock: "#87CEEB", // Azul cielo (mar y cielo despejado)
@@ -97,7 +97,7 @@ const Themes = {
       },
     VanillaAesthetic: {
         backgroundImage: VanillaAesthetic, // Imagen con tonos pastel y cálidos
-        videoId: "ZWgMRelVubw",
+        videoId: "OcbzmgpY4DU",
         colors: {
           timer: "#FFF8DC", // Crema vainilla (suavidad y calidez)
           clock: "#FFE4B5", // Melocotón claro (delicado)
@@ -106,7 +106,7 @@ const Themes = {
       },
       CatVibe: {
         backgroundImage: CatVibe, // Imagen acogedora con un gato
-        videoId: "8tCLsotnM4o",
+        videoId: "WT_RF3p_oOI",
         colors: {
           timer: "#A49789", // Beige cálido (suavidad y calidez)
           clock: "#6D4C41", // Marrón suave (cozy vibes)
