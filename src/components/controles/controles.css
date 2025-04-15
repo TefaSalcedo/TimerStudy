@@ -17,9 +17,9 @@
 .settings-panel {
   position: absolute;
   bottom: 105px;
-  top:60px;
+  top:0px;
   right: 0;
-  width: 180px;
+  width: 250px;
   background-color: rgba(55, 65, 81, 0.8); /* Gris oscuro con transparencia */
   color: white;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -100,7 +100,8 @@ span{
 }
 .theme-buttons{
   display: flex;
-  justify-content: flex-start;
+  display: inline;
+  justify-content: content-column;
   flex-direction: column;
   margin-top: 5px;
   margin-bottom: 10px;
@@ -110,13 +111,13 @@ span{
   opacity: 0.6; /* Opacidad del botón */
   border: none;
   color: white;
-  padding: 10px 20px;
+  padding: 5px 5px;
   text-align: left;
   text-decoration: none;
   display: inline-block;
   font-family: 'Times New Roman', Times, serif;
   font-size: medium;
-  margin: 4px 2px;
+  margin: 2px;
   cursor: pointer;
   border-radius: 8px; /* Bordes redondeados */
 }

@@ -86,7 +86,7 @@ const Themes = {
           buttons: "#4682B4", // Azul acero (elegancia francesa)
         },
       },
-      SummerBeach: {
+    SummerBeach: {
         backgroundImage: SummerBeach, // Imagen de una playa paradisíaca
         videoId: "hOyn0bCydZo",
         colors: {
@@ -95,7 +95,7 @@ const Themes = {
           buttons: "#FF4500", // Naranja intenso (puesta de sol)
         },
       },
-      VanillaAesthetic: {
+    VanillaAesthetic: {
         backgroundImage: VanillaAesthetic, // Imagen con tonos pastel y cálidos
         videoId: "ZWgMRelVubw",
         colors: {
