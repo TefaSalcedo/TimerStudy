@@ -1,47 +1,103 @@
 /* appTime.css */
-.to-do-Menu {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
-  }
-  
-  .to-do-list-item{
-    display: flex;
-    width: 18rem;
-    height: 2.5rem;
-    text-align: center;
-    justify-content: center;
-    padding: 10px 20px;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    color: rgb(255, 253, 253);
-    border: none;
-    border-radius: 25px; /* Bordes redondeados */
-    cursor: pointer;
-    background: linear-gradient(to bottom, #444, #222); /* Degradado */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    opacity:0.7;
+
+.hamburger-button {
+  align-items: center;
+  background: linear-gradient(to bottom, #444, #222); /* Degradado */
+  border-radius: 10px; /* Bordes redondeados */
+  border: none;
+  color: rgb(255, 253, 253);
+  cursor: pointer;
+  display: flex;
+  font-size: 25px;
+  height: 2.5rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  opacity: 0.7;
+  width: 2.5rem;
 }
 
-.hamburger-button{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center; 
-    padding: 10px;
-    margin-bottom: 0.5rem;
-    font-size: 35px;
-    font-weight: bold;
-    color: rgb(255, 253, 253);
-    border: none;
-    border-radius: 10px; /* Bordes redondeados */
-    cursor: pointer;
-    background: linear-gradient(to bottom, #444, #222); /* Degradado */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    opacity:0.7;
+.to-do-Menu {
+  left: 10px;
+  position: fixed;
+  top: 10px;
+  z-index: 1000;
 }
-  .to-do-list {
-    margin-top: 10px;
-  }
+form {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 1.7rem 0 0 0;
+  padding: 0;
+}
+.container {
+  -webkit-backdrop-filter: blur(5px);
+  /* background: rgba(255, 255, 255, 0.07); MODO WHITE */
+  backdrop-filter: blur(5px);
+  background: linear-gradient(to bottom, #444, #222); /* Degradado */
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  opacity: 0.8;
+  padding: 20px 20px 0px 20px; ;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  padding: 10px 10px;
+  width: 60%;
+}
+
+button {
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: none;
+  color: black;
+  cursor: pointer;
+  padding: 10px 10px;
+}
+
+button:hover {
+  background-color: #ffffff;
+}
+
+.botonEliminar.completada {
+  background-color: gray;
+  color: black;
+  opacity: 0.6;
+}
+
+.tareaContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.tareaContainer ul {
+  list-style-type: none;
+  padding: 0;
+}
+.tareaContainer li {
+  align-items: left;
+  background-color: none;
+  border-radius: 5px;
+  display: flex;
+  font-size: 18px;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.tareaContainer li.completed {
+  text-decoration: line-through;
+}
