@@ -1,51 +1,53 @@
 import React, { useState, useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faList } from '@fortawesome/free-solid-svg-icons'; // Importar el ícono de lista|
+import { faPlus } from '@fortawesome/free-solid-svg-icons'; // Importar el ícono de añadir
+import { faTrash } from '@fortawesome/free-solid-svg-icons'; // Importar el ícono de eliminar
 import "../appTime.css";
 import "./toDo.css";
 
 export default function MenuEditable() {
   const [showMenu, setShowMenu] = useState(false);
-  const [buttonsText, setButtonsText] = useState(["", "", ""]);
-  const [isEditing, setIsEditing] = useState([false, false, false]);
+  const [tareas, setTareas] = React.useState([]);
+    const [tarea, setTarea] = React.useState('');
 
-  // Leer textos guardados al cargar la página
-  useEffect(() => {
-    const savedTexts = JSON.parse(localStorage.getItem("buttonsText"));
-    if (savedTexts) {
-      setButtonsText(savedTexts);
+    const agregarClick = (e) => {
+        e.preventDefault();
+        if (tarea.trim() === '') return;
+            const nuevaTarea={
+                id: Date.now(),
+                nombre: tarea,
+                completada:false,
+            }
+            setTareas([...tareas, nuevaTarea]);
+            setTarea('');
     }
-  }, []);
 
-  // Guardar los textos en localStorage cada vez que cambien
-  useEffect(() => {
-    localStorage.setItem("buttonsText", JSON.stringify(buttonsText));
-  }, [buttonsText]);
+    const eliminarClick = (index) => {
+        const nuevasTareas = tareas.filter((_, i) => i !== index);
+        setTareas(nuevasTareas);
+    }
 
-  // Función para manejar el doble click (activar modo edición)
-  const handleDoubleClick = (index) => {
-    const newEditing = [...isEditing];
-    newEditing[index] = true;
-    setIsEditing(newEditing);
-  };
+    const marcarCompletada = (id) => {
+        const nuevasTareas = tareas.map((tarea) => {
+            if (tarea.id === id) {
+                return { ...tarea, completada: !tarea.completada };
+            }
+            return tarea;
+        });
+        setTareas(nuevasTareas);
+    }
+    
+    useEffect(() => {
+        const tareasGuardadas = JSON.parse(localStorage.getItem('tareas'));
+        if (tareasGuardadas) {
+            setTareas(tareasGuardadas);
+        }
+    }, []);
 
-  // Función para manejar cambio de texto
-  const handleChange = (e, index) => {
-    const newTexts = [...buttonsText];
-    newTexts[index] = e.target.value;
-    setButtonsText(newTexts);
-  };
-
-  // Función para salir del modo edición (cuando pierde foco)
-  const handleBlur = (index) => {
-    const newEditing = [...isEditing];
-    newEditing[index] = false;
-    setIsEditing(newEditing);
-  };
-
-   // Función para agregar un nuevo botón
-   const addButton = () => {
-    setButtonsText([...buttonsText, ""]);
-    setIsEditing([...isEditing, false]);
-  };
+    useEffect(() => {
+        localStorage.setItem('tareas', JSON.stringify(tareas));
+    }, [tareas]);
 
   return (
     <div className="to-do-Menu">
@@ -54,37 +56,41 @@ export default function MenuEditable() {
         className="hamburger-button"
         onClick={() => setShowMenu(!showMenu)}
       >
-        ☰
+        <FontAwesomeIcon icon={faList} />
       </button>
 
       {/* Menú Desplegable */}
       {showMenu && (
-        <div className="to-do-list">
-          {buttonsText.map((text, index) => (
-            <div key={index}>
-              {isEditing[index] ? (
-                <input
-                  type="text"
-                  value={text}
-                  onChange={(e) => handleChange(e, index)}
-                  onBlur={() => handleBlur(index)}
-                  autoFocus
-                  className="to-do-list-item"
-                />
-              ) : (
-                <button
-                  onDoubleClick={() => handleDoubleClick(index)}
-                  className="to-do-list-item"
-                >
-                  {text}
-                </button>
-              )}
-            </div>
-          ))}
-          <button className="to-do-list-item" onClick={addButton}>
-            + Añadir Botón
-          </button>
-        </div>
+        <div className="container">
+        <form>
+            <input 
+                type="text" 
+                placeholder="Escribe una tarea" 
+                value={tarea} 
+                onChange={(e)=>setTarea(e.target.value)}/>
+            <button type="submit" onClick={agregarClick}>
+                <FontAwesomeIcon icon={faPlus} />
+            </button>
+        </form>
+        <ul>
+            {tareas.map((tarea, tareaId)=>(
+                <div className="tareaContainer" key={tarea.id}>  
+                    <li 
+                        onClick={() => marcarCompletada(tarea.id)}
+                        style={{ textDecoration: tarea.completada ? 'line-through' : 'none' }}
+                        >
+                        {tarea.nombre}
+                    </li>
+                    <button 
+                        onClick={() => eliminarClick(tareaId)}
+                        className={`botonEliminar ${tarea.completada ? 'completada' : ''}`}
+                        >
+                        <FontAwesomeIcon icon={faTrash} />
+                        </button>
+                </div>
+            ))}
+        </ul>
+    </div>
       )}
     </div>
   );
