@@ -17,7 +17,6 @@
 .settings-panel {
   position: absolute;
   bottom: 105px;
-  top:0px;
   right: 0;
   width: 250px;
   background-color: rgba(55, 65, 81, 0.8); /* Gris oscuro con transparencia */
@@ -106,18 +105,17 @@ span{
   margin-top: 5px;
   margin-bottom: 10px;
 }
-.Boton-estilo{
-  background-color: rgba(55, 65, 81, 0.8);
-  opacity: 0.6; /* Opacidad del botón */
-  border: none;
-  color: white;
-  padding: 5px 5px;
-  text-align: left;
-  text-decoration: none;
-  display: inline-block;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: medium;
-  margin: 2px;
-  cursor: pointer;
-  border-radius: 8px; /* Bordes redondeados */
+
+.theme-select {
+  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
+  border: 2px solid #bdbdbd;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.theme-select option {
+  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
+  color: #f4ecec;
 }

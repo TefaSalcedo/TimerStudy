@@ -72,7 +72,7 @@ export default function MenuEditable() {
                 <FontAwesomeIcon icon={faPlus} />
             </button>
         </form>
-        <ul>
+        <ol>
             {tareas.map((tarea, tareaId)=>(
                 <div className="tareaContainer" key={tarea.id}>  
                     <li 
@@ -89,7 +89,7 @@ export default function MenuEditable() {
                         </button>
                 </div>
             ))}
-        </ul>
+        </ol>
     </div>
       )}
     </div>

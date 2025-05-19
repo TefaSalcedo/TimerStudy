@@ -1,13 +1,25 @@
-import React, {useState} from "react";
+import React, {use, useState} from "react";
 import { Settings } from "lucide-react";
 import "./controles.css"; // Importamos el archivo de estilos
 
-const SettingsPanel = ({ onToggleQuote, onToggleToDo, onToggleMusic, onToggleClockButtons, onThemeChange }) => {
-  const [isPanelOpen, setIsPanelOpen] = useState(false); // Estado para controlar la visibilidad del panel
-  const themes = ["Morning", "Autumn", "Cottagecore", "DarkAcademia", "LightAcademia", "Y2K", "CleanGirl",  "ParisianChic", "SummerBeach","VanillaAesthetic", "CatVibe", "DogVibe",];
+const SettingsPanel = ({ 
+  onToggleQuote, 
+  onToggleToDo, 
+  onToggleMusic, 
+  onToggleClockButtons, 
+  onThemeChange 
+}) => {
+  // Estado para controlar la visibilidad del panel
+  const [isPanelOpen, setIsPanelOpen] = useState(false); 
+  const themes = [
+    "Morning", "Autumn", "Cottagecore", "DarkAcademia", 
+    "LightAcademia", "Y2K", "CleanGirl", "ParisianChic", 
+    "SummerBeach","VanillaAesthetic", "CatVibe", "DogVibe",
+  ];
 
+   // Alternar la visibilidad del panel
   const togglePanel = () => {
-    setIsPanelOpen(!isPanelOpen); // Alternar la visibilidad del panel
+    setIsPanelOpen(!isPanelOpen);
   };
 
   return (
@@ -50,16 +62,17 @@ const SettingsPanel = ({ onToggleQuote, onToggleToDo, onToggleMusic, onToggleClo
               </li>
             </ul>
             <div className="theme-buttons">
-              <h4 className="panel-title">Select Theme:</h4>
+              <label className="panel-title" >Select Theme:</label>
+               <select
+              className="theme-select"
+              onChange={(e) => onThemeChange(e.target.value)}
+            >
               {themes.map((theme) => (
-                <button
-                  key={theme}
-                  onClick={() => onThemeChange(theme)}
-                  className="Boton-estilo"
-                >
+                <option key={theme} className="Boton-estilo">
                   {theme}
-                </button>
+                </option>
               ))}
+            </select>
           </div>
         </div>
         )}

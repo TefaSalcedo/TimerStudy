@@ -1,5 +1,5 @@
 import React from 'react';
-import "./deepWork.css"
+
 
 function DeepWorkOptions({ oneHour, oneHourAndHalf, startDeepWork,pauseDeepWork}) {
   return (

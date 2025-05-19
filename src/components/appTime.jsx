@@ -179,8 +179,10 @@ function TimeComponent() {
     }
   }, [timeLeft]);
 
+useEffect(() => {
   console.log("Tema seleccionado:", selectedTheme);
   console.log("Video ID:", Themes[selectedTheme]?.videoId);
+}, [selectedTheme]);
   
   return (
     // Contenedor principal

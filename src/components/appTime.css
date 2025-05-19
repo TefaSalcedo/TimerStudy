@@ -77,7 +77,7 @@ APP DISPLAY */
     border: none;
     border-radius: 25px; /* Bordes redondeados */
     cursor: pointer;
-    background: linear-gradient(to bottom, #444, #222); /* Degradado */
+background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     opacity:0.7;
 }

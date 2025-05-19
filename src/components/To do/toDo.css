@@ -1,103 +1,145 @@
-/* appTime.css */
-
+/* BOTON  */
 .hamburger-button {
-  align-items: center;
-  background: linear-gradient(to bottom, #444, #222); /* Degradado */
-  border-radius: 10px; /* Bordes redondeados */
-  border: none;
-  color: rgb(255, 253, 253);
-  cursor: pointer;
+/*Display stuff*/
   display: flex;
-  font-size: 25px;
-  height: 2.5rem;
+  align-items: center;
   justify-content: center;
-  margin-bottom: 0.5rem;
-  opacity: 0.7;
+/*Box model stuff*/
   width: 2.5rem;
+  height: 2.5rem;
+  height: min-content;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
+/*Typography stuff*/
+  font-size: 25px;
+  color: rgb(255, 253, 253);
+/*Manipulations stuff*/
+  opacity: 0.7;
+/*Miscellaneous*/
+  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
+  border-radius: 10px; /* Bordes redondeados */
+  cursor: pointer;
 }
 
 .to-do-Menu {
-  left: 10px;
+/*Positioning stuff*/
   position: fixed;
+  left: 10px;
   top: 10px;
   z-index: 1000;
 }
+
+/* INPUT form */
 form {
-  align-items: center;
+/*Display stuff*/
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+/*Box model stuff*/
   margin: 0;
   padding: 0;
 }
-ul {
-  margin: 1.7rem 0 0 0;
-  padding: 0;
-}
+
 .container {
+/*Box model stuff*/
+  width: 280px;
+  height: 300px;
+  padding: 20px 20px 5px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
+/*Manipulations stuff*/
+  opacity: 0.8;
+/*Miscellaneous*/
   -webkit-backdrop-filter: blur(5px);
   /* background: rgba(255, 255, 255, 0.07); MODO WHITE */
   backdrop-filter: blur(5px);
-  background: linear-gradient(to bottom, #444, #222); /* Degradado */
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  opacity: 0.8;
-  padding: 20px 20px 0px 20px; ;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  width: 280px;
+  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
 }
 
 input {
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-  padding: 10px 10px;
+/*Box model stuff*/
   width: 60%;
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+/*Typography stuff*/
+  font-size: 14px;
 }
 
 button {
-  background-color: #ffffff;
-  border-radius: 5px;
-  border: none;
-  color: black;
-  cursor: pointer;
+/*Box model stuff*/
   padding: 10px 10px;
-}
-
-button:hover {
+  border: none;
+  border-radius: 5px;
   background-color: #ffffff;
+/*Typography stuff*/
+  color: black;
+/*Miscellaneous*/
+  cursor: pointer;
 }
 
 .botonEliminar.completada {
+/*Box model stuff*/
   background-color: gray;
+/*Typography stuff*/
   color: black;
+/*Manipulations stuff*/
   opacity: 0.6;
 }
 
+.container ol {
+/*Box model stuff*/
+  max-height: 210px; /* Ajusta según el espacio que quieras */
+  margin: 1.7rem 0 0 0;
+  padding: 0;
+/*Miscellaneous*/
+  max-height: 210px; /* Ajusta según el espacio que quieras */
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE y Edge */
+  -ms-overflow-style: none; /* IE y Edge */
+  list-style: armenian;
+}
+.container ol::-webkit-scrollbar {
+/*Display stuff*/
+  display: none; /* Chrome, Safari y Opera */
+/*Miscellaneous*/
+  display: none; /* Chrome, Safari y Opera */
+}
+
 .tareaContainer {
+/*Display stuff*/
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+/*Box model stuff*/
   margin-top: 10px;
+/*Typography stuff*/
   text-align: left;
 }
 
-.tareaContainer ul {
-  list-style-type: none;
-  padding: 0;
-}
 .tareaContainer li {
-  align-items: left;
-  background-color: none;
-  border-radius: 5px;
-  display: flex;
-  font-size: 18px;
+/*Box model stuff*/
+  width: 80%;
   height: 100%;
-  justify-content: space-between;
+  border-radius: 5px;
+/*Typography stuff*/
+  font-size: 18px;
+  text-align: left;
+  text-overflow: ellipsis;
+  text-overflow: ellipsis;
+/*Miscellaneous*/
+  overflow: hidden;
+  overflow: hidden;
+  white-space: wrap;
 }
 
 .tareaContainer li.completed {
+/*Typography stuff*/
   text-decoration: line-through;
 }
