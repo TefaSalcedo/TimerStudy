@@ -1,7 +1,8 @@
 import React, { useState} from "react";
-import { Settings } from "lucide-react";
-import PanelItem from "./Panelitems/panelItem" // Importamos el componente PanelItem
-import "./controles.css"; // Importamos el archivo de estilos
+import PanelItem from "./Panelitems/panelItem" 
+import ThemeButton from "./ThemeButtons/themeButton.jsx"; 
+import SettingIcon from "./settingIcon/settingIcon.jsx";
+import "./controles.css"; 
 
 const SettingsPanel = ({ 
   onToggleQuote, 
@@ -12,11 +13,6 @@ const SettingsPanel = ({
 }) => {
   // Estado para controlar la visibilidad del panel
   const [isPanelOpen, setIsPanelOpen] = useState(false); 
-  const themes = [
-    "Morning", "Autumn", "Cottagecore", "DarkAcademia", 
-    "LightAcademia", "Y2K", "CleanGirl", "ParisianChic", 
-    "SummerBeach","VanillaAesthetic", "CatVibe", "DogVibe",
-  ];
 
    // Alternar la visibilidad del panel
   const togglePanel = () => {
@@ -26,9 +22,8 @@ const SettingsPanel = ({
   return (
     <div className="panel">
       {/* Ícono de configuración */}
-      <div className="settings-icon" onClick={togglePanel}>
-        <Settings size={24} />
-      </div>
+      <SettingIcon togglePanel={togglePanel} />
+      {/* Panel de configuración */}
         {isPanelOpen && (
           <div className="settings-panel">
             <h3 className="panel-title">Controles</h3>
@@ -40,19 +35,8 @@ const SettingsPanel = ({
                 onToggleClockButtons={onToggleClockButtons}
                 />
             </ul>
-            <div className="theme-buttons">
-              <label className="panel-title" >Select Theme:</label>
-                <select
-                  className="theme-select"
-                  onChange={(e) => onThemeChange(e.target.value)}
-                >
-                    {themes.map((theme) => (
-                      <option key={theme} className="Boton-estilo">
-                        {theme}
-                      </option>
-                    ))}
-                </select>
-          </div>
+             <ThemeButton 
+                onThemeChange={onThemeChange} />
         </div>
         )}
     </div>

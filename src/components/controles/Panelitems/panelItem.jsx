@@ -1,4 +1,5 @@
-    
+import "./panelItem.css";
+
 const PanelItem = ({ onToggleQuote, onToggleToDo, onToggleMusic, onToggleClockButtons }) => {
 
     //Array de funciones para manejar los eventos de cambio

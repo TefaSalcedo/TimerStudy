@@ -1,0 +1,10 @@
+.settings-icon {
+  position: fixed;
+  bottom: 25px;
+  right: 0;
+  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
+  color: white;
+  padding: 8px;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+}
