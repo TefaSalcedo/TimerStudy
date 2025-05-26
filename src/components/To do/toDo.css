@@ -91,38 +91,6 @@ button {
   opacity: 0.6;
 }
 
-.container ol {
-/*Box model stuff*/
-  max-height: 210px; /* Ajusta según el espacio que quieras */
-  margin: 1.7rem 0 0 0;
-  padding: 0;
-/*Miscellaneous*/
-  max-height: 210px; /* Ajusta según el espacio que quieras */
-  overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE y Edge */
-  -ms-overflow-style: none; /* IE y Edge */
-  list-style: armenian;
-}
-.container ol::-webkit-scrollbar {
-/*Display stuff*/
-  display: none; /* Chrome, Safari y Opera */
-/*Miscellaneous*/
-  display: none; /* Chrome, Safari y Opera */
-}
-
-.tareaContainer {
-/*Display stuff*/
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-/*Box model stuff*/
-  margin-top: 10px;
-/*Typography stuff*/
-  text-align: left;
-}
-
 .tareaContainer li {
 /*Box model stuff*/
   width: 80%;

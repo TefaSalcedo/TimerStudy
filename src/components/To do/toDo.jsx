@@ -2,14 +2,14 @@ import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faList } from '@fortawesome/free-solid-svg-icons'; // Importar el ícono de lista|
 import { faPlus } from '@fortawesome/free-solid-svg-icons'; // Importar el ícono de añadir
-import { faTrash } from '@fortawesome/free-solid-svg-icons'; // Importar el ícono de eliminar
 import  EmojiButton from "../emoji/emojis.jsx";
+import ListadeTareasInput from "./ListaTareasInput/ListaTareasInput.jsx"; // Importar el componente de lista de tareas
 import "../appTime.css";
 import "./toDo.css";
 
 export default function MenuEditable() {
-  const [showMenu, setShowMenu] = useState(false);
-  const [tareas, setTareas] = React.useState([]);
+    const [showMenu, setShowMenu] = useState(false);
+    const [tareas, setTareas] = React.useState([]);
     const [tarea, setTarea] = React.useState('');
 
     const agregarClick = (e) => {
@@ -77,24 +77,7 @@ export default function MenuEditable() {
                 <FontAwesomeIcon icon={faPlus} />
             </button>
         </form>
-        <ol>
-            {tareas.map((tarea, tareaId)=>(
-                <div className="tareaContainer" key={tarea.id}>  
-                    <li 
-                        onClick={() => marcarCompletada(tarea.id)}
-                        style={{ textDecoration: tarea.completada ? 'line-through' : 'none' }}
-                        >
-                        {tarea.nombre}
-                    </li>
-                    <button 
-                        onClick={() => eliminarClick(tareaId)}
-                        className={`botonEliminar ${tarea.completada ? 'completada' : ''}`}
-                        >
-                        <FontAwesomeIcon icon={faTrash} />
-                        </button>
-                </div>
-            ))}
-        </ol>
+        <ListadeTareasInput tareas={tareas} marcarCompletada={marcarCompletada} eliminarClick={eliminarClick} />
     </div>
       )}
     </div>
