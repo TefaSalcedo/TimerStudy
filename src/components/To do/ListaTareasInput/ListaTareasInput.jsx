@@ -1,8 +1,6 @@
-// buscar si tareas si va ahí, 
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'; // Importar el ícono de eliminar
 import './ListaTareasInput.css'; // Asegúrate de tener un archivo CSS para estilos
+import BotonRemove  from '../Button/ButtonRemove.jsx';
+import Tarea from './Tareas/tarea.jsx';
 
 const ListadeTareasInput = ({tareas, marcarCompletada, eliminarClick}) => {
     
@@ -10,21 +8,14 @@ const ListadeTareasInput = ({tareas, marcarCompletada, eliminarClick}) => {
     <ol>
         {tareas.map((tarea, tareaId)=>(
             <div className="tareaContainer" key={tarea.id}>  
-                <li 
-                    onClick={() => marcarCompletada(tarea.id)}
-                    style={{ textDecoration: tarea.completada ? 'line-through' : 'none' }}
-                    >
-                    {tarea.nombre}
-                </li>
-                <button 
-                    onClick={() => eliminarClick(tareaId)}
-                    className={`botonEliminar ${tarea.completada ? 'completada' : ''}`}
-                    >
-                    <FontAwesomeIcon icon={faTrash} />
-                </button>
+                <Tarea
+                    marcarCompletada={marcarCompletada}
+                    tarea={tarea}
+                />
+                <BotonRemove eliminarClick={eliminarClick} tareaId={tareaId} tarea={tarea} />
             </div>
         ))}
     </ol>
     );
 }
-    export default ListadeTareasInput;
+export default ListadeTareasInput;

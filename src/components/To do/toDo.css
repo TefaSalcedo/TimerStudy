@@ -1,27 +1,3 @@
-/* BOTON  */
-.hamburger-button {
-/*Display stuff*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
-/*Box model stuff*/
-  width: 2.5rem;
-  height: 2.5rem;
-  height: min-content;
-  margin-bottom: 0.5rem;
-  border: none;
-  border-radius: 10px; /* Bordes redondeados */
-  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
-/*Typography stuff*/
-  font-size: 25px;
-  color: rgb(255, 253, 253);
-/*Manipulations stuff*/
-  opacity: 0.7;
-/*Miscellaneous*/
-  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
-  border-radius: 10px; /* Bordes redondeados */
-  cursor: pointer;
-}
 
 .to-do-Menu {
 /*Positioning stuff*/
@@ -29,18 +5,6 @@
   left: 10px;
   top: 10px;
   z-index: 1000;
-}
-
-/* INPUT form */
-form {
-/*Display stuff*/
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-/*Box model stuff*/
-  margin: 0;
-  padding: 0;
 }
 
 .container {
@@ -60,54 +24,3 @@ form {
   background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
 }
 
-input {
-/*Box model stuff*/
-  width: 60%;
-  padding: 10px 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-/*Typography stuff*/
-  font-size: 14px;
-}
-
-button {
-/*Box model stuff*/
-  padding: 10px 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #ffffff;
-/*Typography stuff*/
-  color: black;
-/*Miscellaneous*/
-  cursor: pointer;
-}
-
-.botonEliminar.completada {
-/*Box model stuff*/
-  background-color: gray;
-/*Typography stuff*/
-  color: black;
-/*Manipulations stuff*/
-  opacity: 0.6;
-}
-
-.tareaContainer li {
-/*Box model stuff*/
-  width: 80%;
-  height: 100%;
-  border-radius: 5px;
-/*Typography stuff*/
-  font-size: 18px;
-  text-align: left;
-  text-overflow: ellipsis;
-  text-overflow: ellipsis;
-/*Miscellaneous*/
-  overflow: hidden;
-  overflow: hidden;
-  white-space: wrap;
-}
-
-.tareaContainer li.completed {
-/*Typography stuff*/
-  text-decoration: line-through;
-}

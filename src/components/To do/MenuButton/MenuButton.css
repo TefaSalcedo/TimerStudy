@@ -1,0 +1,25 @@
+
+.hamburger-button {
+/*Display stuff*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+/*Box model stuff*/
+  width: 2.5rem;
+  height: 2.5rem;
+  height: min-content;
+  margin-bottom: 0.5rem;
+  border: none;
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
+/*Typography stuff*/
+  font-size: 25px;
+  color: rgb(255, 253, 253);
+/*Manipulations stuff*/
+  opacity: 0.7;
+/*Miscellaneous*/
+  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
+  border-radius: 10px; /* Bordes redondeados */
+  cursor: pointer;
+}
+

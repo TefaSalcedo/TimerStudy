@@ -1,0 +1,22 @@
+
+/* INPUT form */
+form {
+/*Display stuff*/
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+/*Box model stuff*/
+  margin: 0;
+  padding: 0;
+}
+
+input {
+/*Box model stuff*/
+  width: 60%;
+  padding: 10px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+/*Typography stuff*/
+  font-size: 14px;
+}
