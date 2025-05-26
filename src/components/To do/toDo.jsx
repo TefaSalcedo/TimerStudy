@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faList } from '@fortawesome/free-solid-svg-icons'; // Importar el ícono de lista|
 import { faPlus } from '@fortawesome/free-solid-svg-icons'; // Importar el ícono de añadir
 import { faTrash } from '@fortawesome/free-solid-svg-icons'; // Importar el ícono de eliminar
+import  EmojiButton from "../emoji/emojis.jsx";
 import "../appTime.css";
 import "./toDo.css";
 
@@ -63,11 +64,15 @@ export default function MenuEditable() {
       {showMenu && (
         <div className="container">
         <form>
+            <div>
             <input 
                 type="text" 
                 placeholder="Escribe una tarea" 
                 value={tarea} 
-                onChange={(e)=>setTarea(e.target.value)}/>
+                onChange={(e)=>setTarea(e.target.value)}
+            />
+            <EmojiButton onSelect={emojiObj => setTarea(tarea + emojiObj.emoji)} />
+            </div>
             <button type="submit" onClick={agregarClick}>
                 <FontAwesomeIcon icon={faPlus} />
             </button>
