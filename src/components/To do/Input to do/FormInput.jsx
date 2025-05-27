@@ -1,4 +1,4 @@
-import  EmojiButton from "../../emoji/emojis.jsx"; // Importar el componente EmojiButton
+import  EmojiButton from "../emoji/emojis.jsx"; // Importar el componente EmojiButton
 import ButtonToAdd from "../Button/ButtonToAdd.jsx";
 import "./form.css";
 

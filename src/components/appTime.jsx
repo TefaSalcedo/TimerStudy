@@ -6,7 +6,7 @@ import TimeOptions from './appTime/Display/timeOption.jsx';
 import TimeDisplay from './appTime/Display/timeDisplay.jsx';
 import PomodoroOptions from './appTime/Pomodoro/pomodoro.jsx'
 import DeepWorkOptions from './appTime/Deep Work/deepWorkOption.jsx';
-import YoutubeSpecificVideo from '../components/spotify/youtube.jsx';
+import YoutubeSpecificVideo from '../components/Musica/youtube.jsx';
 import SettingsPanel from './controles/controles.jsx';
 import Quote from './Quotes/quote.jsx';
 import MenuEditable from './To do/toDo.jsx';
