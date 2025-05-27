@@ -3,7 +3,7 @@ import Draggable from "react-draggable";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import TimeOptions from './appTime/Display/timeOption.jsx';
-import TimeDisplay from './appTime/Display/timeDisplay.jsx';
+import TimeDisplay from './appTime/Display/TimeDisplay/timeDisplay.jsx';
 import PomodoroOptions from './appTime/Pomodoro/pomodoro.jsx'
 import DeepWorkOptions from './appTime/Deep Work/deepWorkOption.jsx';
 import YoutubeSpecificVideo from '../components/Musica/youtube.jsx';

@@ -6,7 +6,7 @@ function TimeDisplay({ hours, minutes,seconds }) {
     <div className="flip-clock">
       <div className="flip-unit" id="hours">
         {hours}
-      </div>
+       </div>
       <div className="flip-unit" id="minutes">
         {minutes}
       </div>
