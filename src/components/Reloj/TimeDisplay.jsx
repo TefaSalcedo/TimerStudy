@@ -10,9 +10,9 @@ function TimeDisplay({showClockButtons}) {
   const [isRealTime, setIsRealTime] = useState(true);
   const [timerMode, setTimerMode] = useState("none");
   const [isBreak, setIsBreak] = useState(false);
-  const [pomodoroMinutes, setPomodoroMinutes] = useState(5);
+  const [pomodoroMinutes, setPomodoroMinutes] = useState(2);
   const [deepWorkMinutes, setDeepWorkMinutes] = useState(45);
-  const [breakMinutes, setBreakMinutes] = useState(10);
+  const [breakMinutes, setBreakMinutes] = useState(1);
   const [showDeepWorkOptions, setShowDeepWorkOptions] = useState(false);
   const [showPomodoroOptions, setShowPomodoroOptions] = useState(false);
 
@@ -26,6 +26,7 @@ function TimeDisplay({showClockButtons}) {
     pauseCountdown,
     resetClock,
     updateClock,
+    isCounting,
   } = useTimeManager({ breakMinutes, timerMode, isBreak });
 
   useEffect(() => {
@@ -37,17 +38,25 @@ function TimeDisplay({showClockButtons}) {
 
 // Sincroniza el timer con el input de Pomodoro
 useEffect(() => {
-  if (timerMode === "pomodoro" && showPomodoroOptions) {
+  if (
+    timerMode === "pomodoro" &&
+    showPomodoroOptions &&
+    !isCounting // Solo si NO está corriendo
+  ) {
     setTimer(pomodoroMinutes);
   }
-}, [pomodoroMinutes, timerMode, showPomodoroOptions, setTimer]);
+}, [pomodoroMinutes, timerMode, showPomodoroOptions, setTimer, isCounting]);
 
 // Sincroniza el timer con el input de Deep Work
 useEffect(() => {
-  if (timerMode === "deepWork" && showDeepWorkOptions) {
+  if (
+    timerMode === "deepWork" &&
+    showDeepWorkOptions &&
+    !isCounting // Solo si NO está corriendo
+  ) {
     setTimer(deepWorkMinutes);
   }
-}, [deepWorkMinutes, timerMode, showDeepWorkOptions, setTimer]);
+}, [deepWorkMinutes, timerMode, showDeepWorkOptions, setTimer, isCounting]);
 
 
   const handleInput = (e, min, max, setter, relatedSetter, relatedValue) => {

@@ -78,6 +78,7 @@ function useTimeManager({  breakMinutes, timerMode, isBreak }) {
     pauseCountdown,
     resetClock,
     updateClock,
+    isCounting,
   };
 }
 
