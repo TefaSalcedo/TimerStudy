@@ -1,14 +1,70 @@
-.settings-panel {
+  .menu.Morning{
+    --color--background: rgba(55, 65, 81, 0.8); 
+    --color--texto: rgb(19, 16, 16);
+    --color--boton: #000000; 
+  }
+  .menu.Autumn {
+    --color--background: rgba(56, 2, 2, 0.494); 
+    --color--texto: rgb(252, 208, 175);
+    --color--boton: #ffb74d; 
+  }
+  .menu.Cottagecore{
+    --color--background: rgba(255, 255, 255, 0.8); 
+    --color--texto: black;
+    --color--boton: #ffb74d; 
+  }
+  .menu.DarkAcademia{
+    --color--background: rgba(255, 255, 255, 0.8); 
+    --color--texto: black;
+    --color--boton: #ffb74d; 
+  }
+  .menu.LightAcademia{
+    --color--background: rgba(255, 255, 255, 0.8); 
+    --color--texto: black;
+    --color--boton: #ffb74d; 
+  }
+  .menu.Y2KCleanGirl{
+    --color--background: rgba(255, 255, 255, 0.8); 
+    --color--texto: black;
+    --color--boton: #ffb74d; 
+  }
+  .menu.ParisianChic{
+    --color--background: rgba(255, 255, 255, 0.8); 
+    --color--texto: black;
+    --color--boton: #ffb74d; 
+  }
+  .menu.SummerBeach{
+    --color--background: rgba(255, 255, 255, 0.8); 
+    --color--texto: black;
+    --color--boton: #ffb74d; 
+  }
+  .menu.VanillaAesthetic{
+    --color--background: rgba(255, 255, 255, 0.8); 
+    --color--texto: black;
+    --color--boton: #ffb74d; 
+  }
+  .menu.CatVibe{
+    --color--background: rgba(255, 255, 255, 0.8); 
+    --color--texto: black;
+    --color--boton: #ffb74d; 
+  }
+  .menu.DogVibe{
+    --color--background: rgba(255, 255, 255, 0.8); 
+    --color--texto: black;
+    --color--boton: #ffb74d; 
+  }
+
+.menu {
   position: absolute;
   bottom: 105px;
   right: 0;
   width: 250px;
-  background-color: rgba(55, 65, 81, 0.8); /* Gris oscuro con transparencia */
-  color: white;
+  background-color: var(--color--background);
+  color: var(--color--texto);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 12px;
-  opacity: 0.9; /* Opacidad del panel */
+  opacity: 0.9; 
   z-index: 1000; /* Asegúrate de que el panel esté por encima de otros elementos */
 }
 

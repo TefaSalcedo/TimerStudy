@@ -6,7 +6,7 @@ const ThemeButton = ({onThemeChange}) => {
     "Y2K", "CleanGirl", "ParisianChic", "SummerBeach","VanillaAesthetic", 
     "CatVibe", "DogVibe",
     ];
-
+    
   return (
     <div className="theme-buttons">
 
@@ -19,6 +19,7 @@ const ThemeButton = ({onThemeChange}) => {
                 <option key={theme} className="Boton-estilo">
                 {theme}
                 </option>
+                
             ))}
         </select>
     </div>

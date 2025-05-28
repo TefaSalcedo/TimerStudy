@@ -46,3 +46,27 @@ background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
     flex-direction: row;
     gap: 0.2rem;
 }
+
+
+/* REVISAR  */
+/* .app-clock{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: white;
+}
+
+.time-container {
+    display: flex;
+    position: relative;
+    flex-direction: row-reverse;
+    align-self: center;
+    align-items: center;
+    cursor:grab;
+    gap:2rem;
+}
+.hidden {
+    visibility: hidden;
+  } */

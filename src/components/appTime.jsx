@@ -12,58 +12,69 @@ import "./appTime.css";
 
 function TimeComponent() {
   // Estados para controlar el tema de la aplicación
-  const [selectedTheme, setSelectedTheme] = useState("Morning");
   const [showMusic, setShowMusic] = useState(true);
   const [showToDo, setShowToDo] = useState(true);
   const [showQuote, setShowQuote] = useState(true);
   const [showClockButtons, setShowClockButtons] = useState(true);
 
-  useEffect(() => {
-    console.log("Tema seleccionado:", selectedTheme);
-    console.log("Video ID:", Themes[selectedTheme]?.videoId);
-  }, [selectedTheme]);
+  const [tema, setTema] = useState("Morning");
+
+  // useEffect(() => {
+  //   console.log("Tema seleccionado:", tema);
+  //   console.log("Video ID:", Themes[tema]?.videoId);
+  // }, [tema]);
 
   return (
     // Contenedor principal
     <div
       className="app-container"
       style={{
-        backgroundImage: Themes[selectedTheme]?.backgroundImage
-          ? `url(${Themes[selectedTheme].backgroundImage})`
+        backgroundImage: Themes[tema]?.backgroundImage
+          ? `url(${Themes[tema].backgroundImage})`
           : "none", // Usa un valor predeterminado si el tema no es válido
       }}
     >
       <div className="app-left">
-        {showMusic && Themes[selectedTheme]?.videoId && (
-          <YoutubeSpecificVideo videoId={Themes[selectedTheme].videoId} />
+        {/* Contenedor para la música */}
+        {showMusic && Themes[tema]?.videoId && (
+          <YoutubeSpecificVideo videoId={Themes[tema].videoId} />
         )}
+        {/* Contenedor para el menú de tareas */}
         {showToDo && <MenuEditable />}
       </div>
+
       <Draggable axis="y">
         <div className="app-center">
           {/* Contenedor para time*/}
-          <TimeDisplay  showClockButtons={showClockButtons}/>
+          <TimeDisplay showClockButtons={showClockButtons} />
           {/* Contenedor para quotes*/}
           {showQuote && <Quote />}
         </div>
       </Draggable>
 
       <div className="app-rigth">
-        <ToastContainer /> {/* Contenedor para las notificaciones */}
+        {/* Contenedor para las notificaciones */}
+        <ToastContainer /> 
         <SettingsPanel
           onToggleQuote={() => setShowQuote((prev) => !prev)}
           onToggleToDo={() => setShowToDo((prev) => !prev)}
           onToggleMusic={() => setShowMusic((prev) => !prev)}
           onToggleClockButtons={() => setShowClockButtons((prev) => !prev)}
+
+
           onThemeChange={(theme) => {
             if (Themes[theme]) {
-              setSelectedTheme(theme);
+              setTema(theme);
+              console.log(`Tema cambiado a: ${theme}`);
             } else {
-              console.error(`El tema "${theme}" no existe en Themes.`);
+              console.error(`Tema no encontrado: ${theme}`);
             }
           }}
+          tema={tema} // Pasa el tema actual al panel de configuración
+          
         />
       </div>
+
     </div>
   );
 }

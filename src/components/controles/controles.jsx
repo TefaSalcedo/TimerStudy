@@ -9,14 +9,19 @@ const SettingsPanel = ({
   onToggleToDo, 
   onToggleMusic, 
   onToggleClockButtons, 
-  onThemeChange 
+  onThemeChange,
+  // Propiedad para el tema actual
+  tema 
 }) => {
   // Estado para controlar la visibilidad del panel
   const [isPanelOpen, setIsPanelOpen] = useState(false); 
+  console.log("Entraste a SettingsPanel");
+  console.log("Current theme:", tema);
 
    // Alternar la visibilidad del panel
   const togglePanel = () => {
     setIsPanelOpen(!isPanelOpen);
+    console.log("Panel toggled:", !isPanelOpen);
   };
 
   return (
@@ -25,7 +30,7 @@ const SettingsPanel = ({
       <SettingIcon togglePanel={togglePanel} />
       {/* Panel de configuración */}
         {isPanelOpen && (
-          <div className="settings-panel">
+          <div className={`menu ${tema}`}>
             <h3 className="panel-title">Controles</h3>
             <ul className="panel-options">
               <PanelItem 
