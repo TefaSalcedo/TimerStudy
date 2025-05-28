@@ -9,10 +9,9 @@ import "./timeDisplay.css";
 function TimeDisplay({showClockButtons}) {
   const [isRealTime, setIsRealTime] = useState(true);
   const [timerMode, setTimerMode] = useState("none");
-  const [isBreak, setIsBreak] = useState(false);
-  const [pomodoroMinutes, setPomodoroMinutes] = useState(2);
-  const [deepWorkMinutes, setDeepWorkMinutes] = useState(45);
-  const [breakMinutes, setBreakMinutes] = useState(1);
+  const [pomodoroMinutes, setPomodoroMinutes] = useState(0.25);
+  const [deepWorkMinutes, setDeepWorkMinutes] = useState(0.25);
+  const [breakMinutes, setBreakMinutes] = useState(0.05);;
   const [showDeepWorkOptions, setShowDeepWorkOptions] = useState(false);
   const [showPomodoroOptions, setShowPomodoroOptions] = useState(false);
 
@@ -27,7 +26,7 @@ function TimeDisplay({showClockButtons}) {
     resetClock,
     updateClock,
     isCounting,
-  } = useTimeManager({ breakMinutes, timerMode, isBreak });
+  } = useTimeManager({ breakMinutes, timerMode });
 
   useEffect(() => {
     if (!isRealTime) return;
@@ -44,6 +43,7 @@ useEffect(() => {
     !isCounting // Solo si NO está corriendo
   ) {
     setTimer(pomodoroMinutes);
+    console.log("Timer sincronizado con Pomodoro:", pomodoroMinutes);
   }
 }, [pomodoroMinutes, timerMode, showPomodoroOptions, setTimer, isCounting]);
 
@@ -55,6 +55,7 @@ useEffect(() => {
     !isCounting // Solo si NO está corriendo
   ) {
     setTimer(deepWorkMinutes);
+    console.log("Timer sincronizado con Deep Work:", deepWorkMinutes);
   }
 }, [deepWorkMinutes, timerMode, showDeepWorkOptions, setTimer, isCounting]);
 
@@ -130,11 +131,14 @@ useEffect(() => {
       <PomodoroOptions
         startPomodoro={startCountdown}
         pausePomodoro={pauseCountdown}
+        min={0}
+        max={44}
         show={showPomodoroOptions}
         inputValue={pomodoroMinutes}
-        onInputChange={(e) => handleInput(e, 5, 45, setPomodoroMinutes, setBreakMinutes, breakMinutes)}
+        onInputChange={(e) => handleInput(e, 1, 45, setPomodoroMinutes, setBreakMinutes, breakMinutes)}
         breakValue={breakMinutes}
-        onBreakChange={(e) => handleInput(e, 1, pomodoroMinutes - 1, setBreakMinutes)}
+        onBreakChange={(e) => handleInput(e, 0,20, setBreakMinutes)}
+        // onBreakChange={(e) => handleInput(e, 0, pomodoroMinutes - 1, setBreakMinutes)}
       />
     </div>
   );
