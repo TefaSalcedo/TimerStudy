@@ -1,4 +1,4 @@
-import "./SettingIcon.css";
+import "./settingIcon.css";
 import { Settings } from "lucide-react";
 
 const SettingIcon = ({ togglePanel , tema}) => {
