@@ -46,7 +46,9 @@ const SettingsPanel = ({
                 />
             </ul>
              <ThemeButton 
-                onThemeChange={onThemeChange} />
+                onThemeChange={onThemeChange}
+                tema={tema}
+                />
         </div>
         )}
     </div>

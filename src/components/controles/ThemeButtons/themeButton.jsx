@@ -1,6 +1,6 @@
 import "./themeButton.css"; // Importa el archivo CSS para estilos
 
-const ThemeButton = ({onThemeChange}) => {
+const ThemeButton = ({onThemeChange, tema}) => {
     const themes = [
     "Morning", "Autumn", "Cottagecore", "DarkAcademia", "LightAcademia", 
     "Y2K", "CleanGirl", "ParisianChic", "SummerBeach","VanillaAesthetic", 
@@ -8,21 +8,20 @@ const ThemeButton = ({onThemeChange}) => {
     ];
     
   return (
-    <div className="theme-buttons">
-
-        <label className="panel-title" >Select Theme:</label>
-        <select
-            className="theme-select"
-            onChange={(e) => onThemeChange(e.target.value)}
+    <>
+    <label className="panel-title" >Select Theme:</label>
+    <select
+        className={`theme-select ${tema}`}
+        onChange={(e) => onThemeChange(e.target.value)}
         >
-            {themes.map((theme) => (
-                <option key={theme} className="Boton-estilo">
-                {theme}
-                </option>
-                
-            ))}
-        </select>
-    </div>
+        {themes.map((theme) => (
+            <option key={theme} className="Boton-estilo">
+            {theme}
+            </option>
+            
+        ))}
+    </select>
+    </>
   );
 };
 

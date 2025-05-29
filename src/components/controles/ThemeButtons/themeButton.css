@@ -1,23 +1,68 @@
-.theme-buttons{
-  display: flex;
-  display: inline;
-  justify-content: content-column;
-  flex-direction: column;
-  margin-top: 5px;
-  margin-bottom: 10px;
+.theme-select[class*=" "] {
+  --color--background: var(--Morning-bg);
+  --color--texto: var(--Morning-text);
 }
+  
+  .theme-select.Morning{
+    --color--background: var(--Morning-bg); 
+    --color--texto: var(--Morning-text);
+  }
+  .theme-select.Autumn {
+    --color--background: var(--Autumn-bg); 
+    --color--texto: var(--Autumn-text);
+  }
+  .theme-select.Cottagecore{
+    --color--background: var(--Cottagecore-bg); 
+    --color--texto: var(--Cottagecore-text);
+  }
+  .theme-select.DarkAcademia{
+    --color--background: var(--DarkAcademia-bg);
+    --color--texto: var(--DarkAcademia-text); 
+  }
+  .theme-select.LightAcademia{
+    --color--background: var(--LightAcademia-bg);
+    --color--texto: var(--LightAcademia-text);
+  }
+  .theme-select.Y2K{
+    --color--background: var(--Y2K-bg);
+    --color--texto: var(--Y2K-text);
+  }
+  .theme-select.CleanGirl{
+    --color--background: var(--CleanGirl-bg);
+    --color--texto: var(--CleanGirl-text);
+  }
+  .theme-select.ParisianChic{
+    --color--background: var(--ParisianChic-bg);
+    --color--texto: var(--ParisianChic-text);
+  }
+  .theme-select.SummerBeach{
+    --color--background:var(--SummerBeach-bg);
+    --color--texto: var(--SummerBeach-text); 
+  }
+  .theme-select.VanillaAesthetic{
+    --color--background: var(--VanillaAesthetic-bg);
+    --color--texto: var(--VanillaAesthetic-text);
+  }
+  .theme-select.CatVibe{
+    --color--background: var(--CatVibe-bg);
+    --color--texto: var(--CatVibe-text);
+  }
+  .theme-select.DogVibe{
+    --color--background: var(--DogVibe-bg);
+    --color--texto: var(--DogVibe-text);
+  }
 
 .theme-select {
-  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
-  border: 2px solid #bdbdbd;
+  background-color: var(--color--background); 
+  /* border: 2px solid #bdbdbd; */
   border-radius: 8px;
   padding: 8px 12px;
   font-size: 16px;
-  color: #ffffff;
+  color: var(--color--texto);
 }
 
 .theme-select option {
-  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
-  color: #f4ecec;
+  background-color: var(--color--background);
+  color:var(--color--texto);
 }
 
