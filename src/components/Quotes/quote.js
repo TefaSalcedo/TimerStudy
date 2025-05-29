@@ -1,5 +1,10 @@
 export async function GetQuote (){
     try{
+        const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+        const url = isLocal
+            ? '/api/random'
+            : 'https://zenquotes.io/api/random';
+            
         const response = await fetch('/api/random');
         const data = await response.json();
         console.log(data);
