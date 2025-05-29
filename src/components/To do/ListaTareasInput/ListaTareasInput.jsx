@@ -13,6 +13,7 @@ const ListadeTareasInput = ({tareas, marcarCompletada, eliminarClick, tema}) => 
                 <Tarea
                     marcarCompletada={marcarCompletada}
                     tarea={tarea}
+                    tema={tema}
                 />
                 <BotonRemove eliminarClick={eliminarClick} tareaId={tareaId} tarea={tarea} />
             </div>

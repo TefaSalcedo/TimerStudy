@@ -1,21 +1,70 @@
-li {
-/*Box model stuff*/
-  width: 80%;
-  height: 100%;
+.li-tarea{
   border-radius: 5px;
-/*Typography stuff*/
   font-size: 18px;
+  height: 100%;
+  overflow: hidden;
   text-align: left;
   text-overflow: ellipsis;
-  text-overflow: ellipsis;
-/*Miscellaneous*/
-  overflow: hidden;
-  overflow: hidden;
   white-space: wrap;
+  width: 80%;
+  color:var(--color--texto)
 }
-
 li.completed {
-/*Typography stuff*/
   text-decoration: line-through;
   
 }
+
+
+  .li-tarea[class*=" "] {
+  --color--background: var(--Morning-bg);
+  --color--texto: var(--Morning-text);
+  }
+  
+  .li-tarea.Morning{
+    --color--background: var(--Morning-bg); 
+    --color--texto: var(--Morning-text);
+  }
+  .li-tarea.Autumn {
+    --color--background: var(--Autumn-bg); 
+    --color--texto: var(--Autumn-text);
+  }
+  .li-tarea.Cottagecore{
+    --color--background: var(--Cottagecore-bg); 
+    --color--texto: var(--Cottagecore-text);
+  }
+  .li-tarea.DarkAcademia{
+    --color--background: var(--DarkAcademia-bg);
+    --color--texto: var(--DarkAcademia-text); 
+  }
+  .li-tarea.LightAcademia{
+    --color--background: var(--LightAcademia-bg);
+    --color--texto: var(--LightAcademia-text);
+  }
+  .li-tarea.Y2K{
+    --color--background: var(--Y2K-bg);
+    --color--texto: var(--Y2K-text);
+  }
+  .li-tarea.CleanGirl{
+    --color--background: var(--CleanGirl-bg);
+    --color--texto: var(--CleanGirl-text);
+  }
+  .li-tarea.ParisianChic{
+    --color--background: var(--ParisianChic-bg);
+    --color--texto: var(--ParisianChic-text);
+  }
+  .li-tarea.SummerBeach{
+    --color--background:var(--SummerBeach-bg);
+    --color--texto: var(--SummerBeach-text); 
+  }
+  .li-tarea.VanillaAesthetic{
+    --color--background: var(--VanillaAesthetic-bg);
+    --color--texto: var(--VanillaAesthetic-text);
+  }
+  .li-tarea.CatVibe{
+    --color--background: var(--CatVibe-bg);
+    --color--texto: var(--CatVibe-text);
+  }
+  .li-tarea.DogVibe{
+    --color--background: var(--DogVibe-bg);
+    --color--texto: var(--DogVibe-text);
+  }
