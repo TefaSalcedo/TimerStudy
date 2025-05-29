@@ -4,7 +4,7 @@ import PomodoroOptions from "./Opciones/pomodoro/pomodoro.jsx";
 import DeepWorkOptions from "./Opciones/deepWork/deepWorkOption.jsx";
 import AppClock from "./appClock/appClock.jsx";
 import useTimeManager from "./ManageClock.js";
-import "./timeDisplay.css";
+import "./TimeDisplay.css";
 
 function TimeDisplay({showClockButtons, tema}) {
   const [isRealTime, setIsRealTime] = useState(true);
@@ -124,7 +124,7 @@ useEffect(() => {
           />}
       </div>
 
-      {/* <PomodoroOptions
+      <PomodoroOptions
         startPomodoro={startCountdown}
         pausePomodoro={pauseCountdown}
         min={0}
@@ -136,9 +136,9 @@ useEffect(() => {
         onBreakChange={(e) => handleInput(e, 0,20, setBreakMinutes)}
         tema={tema}
     
-      /> */}
+      />
       
-      {/* <DeepWorkOptions
+      <DeepWorkOptions
         oneHour={() => setTimer(60)}
         oneHourAndHalf={() => setTimer(90)}
         startDeepWork={startCountdown}
@@ -149,7 +149,7 @@ useEffect(() => {
         breakValue={breakMinutes}
         onBreakChange={(e) => handleInput(e, 1, deepWorkMinutes - 1, setBreakMinutes)}
         tema={tema}
-      /> */}
+      />
       
       
     </div>
