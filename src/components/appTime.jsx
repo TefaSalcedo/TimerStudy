@@ -37,10 +37,14 @@ function TimeComponent() {
       <div className="app-left">
         {/* Contenedor para la música */}
         {showMusic && Themes[tema]?.videoId && (
-          <YoutubeSpecificVideo videoId={Themes[tema].videoId} />
+          <YoutubeSpecificVideo 
+            videoId={Themes[tema].videoId} />
         )}
         {/* Contenedor para el menú de tareas */}
-        {showToDo && <MenuEditable />}
+        {showToDo && 
+        <MenuEditable 
+          tema={tema} 
+          />} 
       </div>
 
       <Draggable axis="y">

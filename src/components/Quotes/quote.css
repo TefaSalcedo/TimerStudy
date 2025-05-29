@@ -1,33 +1,37 @@
-
+/* {`quote ${tema}`} */
 
 .quote{
     background-color: var(--color--background); 
     border-radius: 2px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction:column; 
     font-family: 'Times New Roman', Times, serif;
     margin-top: 10px;
     opacity:0.7;
     padding: 10px;
-    text-align: center;
-    width: 600px;
     position: relative ;
-    display: flex;
-    flex-direction:column; 
+    text-align: center;
+    width: 600px; 
+
 }
   .author {
+    color:var(--color--texto);
     font-size: 12px;
     font-weight: bold;
     margin-top: 5px;
-    color:var(--color--texto);
   }
   p{
     align-items: center;
     color:var(--color--texto);
     font-size: 1.5rem;
     font-weight:lighter;
-    word-wrap: break-word; /* asegura que las palabras largas se partan si es necesario */
-    white-space: normal;   /* permite saltos de línea normales */
     overflow-wrap: anywhere; /* también ayuda en casos extremos */
+    overflow-wrap: anywhere; /* también ayuda en casos extremos */
+    white-space: normal;   /* permite saltos de línea normales */
+    white-space: normal;   /* permite saltos de línea normales */
+    word-wrap: break-word; /* asegura que las palabras largas se partan si es necesario */
+    word-wrap: break-word; /* asegura que las palabras largas se partan si es necesario */
   }
   
   .quote[class*=" "] {

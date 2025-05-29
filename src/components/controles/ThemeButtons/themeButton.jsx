@@ -8,20 +8,20 @@ const ThemeButton = ({onThemeChange, tema}) => {
     ];
     
   return (
-    <>
+    <div className={`theme-container`}>
     <label className="panel-title" >Select Theme:</label>
     <select
         className={`theme-select ${tema}`}
         onChange={(e) => onThemeChange(e.target.value)}
         >
         {themes.map((theme) => (
-            <option key={theme} className="Boton-estilo">
+            <option key={theme} >
             {theme}
             </option>
             
         ))}
     </select>
-    </>
+    </div>
   );
 };
 

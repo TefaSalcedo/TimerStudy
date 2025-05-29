@@ -1,32 +1,76 @@
 .container ol {
-/*Box model stuff*/
-  max-height: 210px; /* Ajusta según el espacio que quieras */
-  margin: 1.7rem 0 0 0;
-  padding: 0;
-/*Miscellaneous*/
-  max-height: 210px; /* Ajusta según el espacio que quieras */
-  overflow-y: auto;
-  scrollbar-width: none; /* Firefox */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE y Edge */
-  -ms-overflow-style: none; /* IE y Edge */
+
+  -ms-overflow-style: none;
   list-style: armenian;
+  margin: 1.7rem 0 0 0;
+  max-height: 210px;
+  overflow-y: auto;
+  padding: 0;
+  scrollbar-width: none;
 }
 
 .container ol::-webkit-scrollbar {
-/*Display stuff*/
-  display: none; /* Chrome, Safari y Opera */
-/*Miscellaneous*/
-  display: none; /* Chrome, Safari y Opera */
+  display: none; 
 }
 
 .tareaContainer {
-/*Display stuff*/
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-/*Box model stuff*/
   margin-top: 10px;
-/*Typography stuff*/
   text-align: left;
 }
+
+.tareaContainer[class*=" "] {
+  --color--background: var(--Morning-bg);
+  --color--texto: var(--Morning-text);
+  }
+  
+  .tareaContainer.Morning{
+    --color--background: var(--Morning-bg); 
+    --color--texto: var(--Morning-text);
+  }
+  .tareaContainer.Autumn {
+    --color--background: var(--Autumn-bg); 
+    --color--texto: var(--Autumn-text);
+  }
+  .tareaContainer.Cottagecore{
+    --color--background: var(--Cottagecore-bg); 
+    --color--texto: var(--Cottagecore-text);
+  }
+  .tareaContainer.DarkAcademia{
+    --color--background: var(--DarkAcademia-bg);
+    --color--texto: var(--DarkAcademia-text); 
+  }
+  .tareaContainer.LightAcademia{
+    --color--background: var(--LightAcademia-bg);
+    --color--texto: var(--LightAcademia-text);
+  }
+  .tareaContainer.Y2K{
+    --color--background: var(--Y2K-bg);
+    --color--texto: var(--Y2K-text);
+  }
+  .tareaContainer.CleanGirl{
+    --color--background: var(--CleanGirl-bg);
+    --color--texto: var(--CleanGirl-text);
+  }
+  .tareaContainer.ParisianChic{
+    --color--background: var(--ParisianChic-bg);
+    --color--texto: var(--ParisianChic-text);
+  }
+  .tareaContainer.SummerBeach{
+    --color--background:var(--SummerBeach-bg);
+    --color--texto: var(--SummerBeach-text); 
+  }
+  .tareaContainer.VanillaAesthetic{
+    --color--background: var(--VanillaAesthetic-bg);
+    --color--texto: var(--VanillaAesthetic-text);
+  }
+  .tareaContainer.CatVibe{
+    --color--background: var(--CatVibe-bg);
+    --color--texto: var(--CatVibe-text);
+  }
+  .tareaContainer.DogVibe{
+    --color--background: var(--DogVibe-bg);
+    --color--texto: var(--DogVibe-text);
+  }

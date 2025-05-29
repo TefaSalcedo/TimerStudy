@@ -3,6 +3,7 @@ import ButtonToAdd from "../Button/ButtonToAdd.jsx";
 import "./form.css";
 
 const FormInput = ({ setTarea, tarea, agregarClick}) => {
+    console.log("inicio de Form input")
     return (
         <form>
             <div>

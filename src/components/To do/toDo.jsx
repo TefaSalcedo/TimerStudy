@@ -6,12 +6,14 @@ import "../appTime.css";
 import "./toDo.css";
 
 
-export default function MenuEditable() {
+export default function MenuEditable({tema}) {
     const [showMenu, setShowMenu] = useState(false);
     const [tareas, setTareas] = React.useState([]);
     const [tarea, setTarea] = React.useState("");
 
     const agregarClick = (e) => {
+        debugger;
+        console.log("Click agregar")
         e.preventDefault();
         if (tarea.trim() === "") return;
         const nuevaTarea = {
@@ -21,6 +23,7 @@ export default function MenuEditable() {
         };
         setTareas([...tareas, nuevaTarea]);
         setTarea("");
+
     };
 
     const eliminarClick = (index) => {
@@ -50,24 +53,32 @@ export default function MenuEditable() {
     }, [tareas]);
 
     return (
-        <div className="to-do-Menu">
+        <div className={`to-do-Menu`}>
             {/* Botón Hamburguesa */}
-            <MenuButton showMenu={showMenu} setShowMenu={setShowMenu} />
+            <MenuButton 
+                showMenu={showMenu} 
+                setShowMenu={setShowMenu} 
+                tema={tema}
+                />
             {/* Menú Desplegable */}
+
             {showMenu && (
-                <div className="container">
+                <div className={`container`}>
                     <FormInput
                         setTarea={setTarea}
                         tarea={tarea}
                         agregarClick={agregarClick}
+                        tema={tema}
                     />
                     <ListadeTareasInput
                         tareas={tareas}
                         marcarCompletada={marcarCompletada}
                         eliminarClick={eliminarClick}
+                        tema={tema}
                     />
                 </div>
             )}
+            
         </div>
     );
 }

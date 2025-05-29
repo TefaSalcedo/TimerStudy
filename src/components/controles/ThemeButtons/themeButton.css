@@ -1,3 +1,27 @@
+.theme-container{
+  display:flex;
+  flex-direction: column;
+  /* background-color: black; */
+}
+
+select option{
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  color: black;
+  background-color: rgba(87, 87, 87, 0.214);
+
+}
+.theme-select{
+  background-color: var(--color--background);
+  color:var(--color--texto);
+  padding:5px;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.boton-estilo :hover{
+  background-color:var(--color--background) ;
+}
 .theme-select[class*=" "] {
   --color--background: var(--Morning-bg);
   --color--texto: var(--Morning-text);
@@ -51,18 +75,3 @@
     --color--background: var(--DogVibe-bg);
     --color--texto: var(--DogVibe-text);
   }
-
-.theme-select {
-  background-color: var(--color--background); 
-  /* border: 2px solid #bdbdbd; */
-  border-radius: 8px;
-  padding: 8px 12px;
-  font-size: 16px;
-  color: var(--color--texto);
-}
-
-.theme-select option {
-  background-color: var(--color--background);
-  color:var(--color--texto);
-}
-

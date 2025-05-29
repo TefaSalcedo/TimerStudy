@@ -1,4 +1,34 @@
-  .menu[class*=" "] {
+
+.menu {
+  /* -webkit-backdrop-filter: blur(8px); */
+  backdrop-filter: blur(5px);
+  /* background-color: var(--color--background); */
+  border-radius: 8px;
+  bottom: 105px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  color: var(--color--texto);
+  opacity: 0.8; 
+  padding: 12px;
+  position: absolute;
+  right: 0;
+  width: 250px;
+  z-index: 1000; 
+}
+
+
+.panel-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.panel-options {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu[class*=" "] {
   --color--background: var(--Morning-bg);
   --color--texto: var(--Morning-text);
 }
@@ -52,28 +82,3 @@
     --color--texto: var(--DogVibe-text);
   }
 
-.menu {
-  position: absolute;
-  bottom: 105px;
-  right: 0;
-  width: 250px;
-  background-color: var(--color--background);
-  color: var(--color--texto);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 12px;
-  opacity: 0.9; 
-  z-index: 1000; /* Asegúrate de que el panel esté por encima de otros elementos */
-}
-
-.panel-title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
-
-.panel-options {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}

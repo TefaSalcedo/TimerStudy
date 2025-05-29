@@ -1,20 +1,14 @@
 button {
-/*Box model stuff*/
-  padding: 10px 10px;
-  border: none;
-  border-radius: 5px;
   background-color: #ffffff;
-/*Typography stuff*/
+  border-radius: 5px;
+  border: none;
   color: black;
-/*Miscellaneous*/
   cursor: pointer;
+  padding: 10px 10px;
 }
 
 .botonEliminar.completada {
-/*Box model stuff*/
   background-color: gray;
-/*Typography stuff*/
   color: black;
-/*Manipulations stuff*/
   opacity: 0.6;
 }
