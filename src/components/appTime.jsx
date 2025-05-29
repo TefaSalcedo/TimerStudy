@@ -46,9 +46,14 @@ function TimeComponent() {
       <Draggable axis="y">
         <div className="app-center">
           {/* Contenedor para time*/}
-          <TimeDisplay showClockButtons={showClockButtons} />
+          <TimeDisplay 
+            showClockButtons={showClockButtons} 
+            />
           {/* Contenedor para quotes*/}
-          {showQuote && <Quote />}
+          {showQuote && 
+          <Quote 
+            tema={tema} 
+            />}
         </div>
       </Draggable>
 
