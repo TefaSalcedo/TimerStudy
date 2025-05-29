@@ -33,10 +33,10 @@ html{
   --Y2K-text: rgb(255, 255, 255);
   
   --CleanGirl-bg: rgba(255, 255, 255, 0.1);
-  --CleanGirl-text: rgba(18, 18, 18, 0.4);
+  --CleanGirl-text: rgba(75, 70, 70, 0.4);
   
-  --ParisianChic-bg: rgba(224, 189, 189, 0.3);
-  --ParisianChic-text: rgb(255, 255, 255);
+  --ParisianChic-bg: rgb(208, 177, 177);
+  --ParisianChic-text: rgb(38, 38, 38);
   
   --SummerBeach-bg: rgba(1, 98, 61, 0.3);
   --SummerBeach-text: rgb(255, 255, 255);

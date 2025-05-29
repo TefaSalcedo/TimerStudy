@@ -1,72 +1,75 @@
 
-.flip-clock {
-/*Display stuff*/
-    display: flex;
-/*Typography stuff*/
-    font-size: 8rem;
-    color: white;
-/*Miscellaneous*/
-    gap: 0.5rem;
-}
-.flip-unit {
-/*Box model stuff*/
-    width: 11rem;
-    height: 11rem;
-    margin:10px;
-    border-radius: 10px;
-    background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
-/*Display stuff*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-/*Typography stuff*/
-    font-weight: bold;
-/*Manipulations stuff*/
-    opacity:0.7;
-/*Miscellaneous*/
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+.contenedorBotones{
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.time-button{
-    padding: 10px 20px;
-    margin-right: 1rem;
+
+.boton-option {
+    background-color: var(--color--background);
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: var(--color--texto);
+    cursor: pointer;
     font-size: 16px;
     font-weight: bold;
-    color: rgb(255, 253, 253);
-    border: none;
-    border-radius: 25px; /* Bordes redondeados */
-    cursor: pointer;
-background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-right: 1rem;
     opacity:0.7;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
 }
-.time-options{
-    display: flex;
-    flex-direction: row;
-    gap: 0.2rem;
+  .boton-option [class*=" "] {
+  --color--background: var(--Morning-bg);
+  --color--texto: var(--Morning-text);
 }
-
-
-/* REVISAR  */
-/* .app-clock{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    color: white;
-}
-
-.time-container {
-    display: flex;
-    position: relative;
-    flex-direction: row-reverse;
-    align-self: center;
-    align-items: center;
-    cursor:grab;
-    gap:2rem;
-}
-.hidden {
-    visibility: hidden;
-  } */
+  
+  .boton-option.Morning{
+    --color--background: var(--Morning-bg); 
+    --color--texto: var(--Morning-text);
+  }
+  .boton-option.Autumn {
+    --color--background: var(--Autumn-bg); 
+    --color--texto: var(--Autumn-text);
+  }
+  .boton-option.Cottagecore{
+    --color--background: var(--Cottagecore-bg); 
+    --color--texto: var(--Cottagecore-text);
+  }
+  .boton-option.DarkAcademia{
+    --color--background: var(--DarkAcademia-bg);
+    --color--texto: var(--DarkAcademia-text); 
+  }
+  .boton-option.LightAcademia{
+    --color--background: var(--LightAcademia-bg);
+    --color--texto: var(--LightAcademia-text);
+  }
+  .boton-option.Y2K{
+    --color--background: var(--Y2K-bg);
+    --color--texto: var(--Y2K-text);
+  }
+  .boton-option.CleanGirl{
+    --color--background: var(--CleanGirl-bg);
+    --color--texto: var(--CleanGirl-text);
+  }
+  .boton-option.ParisianChic{
+    --color--background: var(--ParisianChic-bg);
+    --color--texto: var(--ParisianChic-text);
+  }
+  .boton-option.SummerBeach{
+    --color--background:var(--SummerBeach-bg);
+    --color--texto: var(--SummerBeach-text); 
+  }
+  .boton-option.VanillaAesthetic{
+    --color--background: var(--VanillaAesthetic-bg);
+    --color--texto: var(--VanillaAesthetic-text);
+  }
+  .boton-option.CatVibe{
+    --color--background: var(--CatVibe-bg);
+    --color--texto: var(--CatVibe-text);
+  }
+  .boton-option.DogVibe{
+    --color--background: var(--DogVibe-bg);
+    --color--texto: var(--DogVibe-text);
+  }

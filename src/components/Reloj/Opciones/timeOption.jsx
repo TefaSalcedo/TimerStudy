@@ -1,21 +1,41 @@
 import React from 'react';
 
+function TimeOptions({ 
+  onRealTimeClick, 
+  onPomodoroClick, 
+  onDeepWorkClick, 
+  onClearClick,
+  tema
+}) {
 
-function TimeOptions({ onRealTimeClick, onPomodoroClick, onDeepWorkClick, onClearClick }) {
+ 
+    //Array de funciones para manejar los eventos de cambio
+    const FuncionesReloj=[
+        {
+        name: "Real Time",
+        onClick: onRealTimeClick
+    },
+    {
+        name: "Pomodoro",
+        onClick: onPomodoroClick
+    },
+    {
+        name: "Deep Work",
+        onClick: onDeepWorkClick
+    },
+    {
+        name: "Clear",
+        onClick: onClearClick
+    }
+    ]
+
   return (
-    <div className="time-options">
-      <button className="time-button" id="RealTime" onClick={onRealTimeClick}>
-        Real Time
-      </button>
-      <button className="time-button" id="pomodoroButton" onClick={onPomodoroClick}>
-        Pomodoro
-      </button>
-      <button className="time-button" id="deepWorkButton" onClick={onDeepWorkClick}>
-        Deep Work
-      </button>
-      <button className="time-button" id="clearButton" onClick={onClearClick}>
-        Clear
-      </button>
+      <div className={`contenedorBotones`}>
+        {FuncionesReloj.map((funcion, index) => (
+        <button className={`boton-option ${tema}`} key={index+funcion.name} onClick={funcion.onClick}>
+            {funcion.name}
+        </button>
+        ))}
     </div>
   );
 }

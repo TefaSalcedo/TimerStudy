@@ -48,6 +48,7 @@ function TimeComponent() {
           {/* Contenedor para time*/}
           <TimeDisplay 
             showClockButtons={showClockButtons} 
+            tema={tema}
             />
           {/* Contenedor para quotes*/}
           {showQuote && 
