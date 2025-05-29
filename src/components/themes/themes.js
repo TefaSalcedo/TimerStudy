@@ -1,16 +1,15 @@
-import Morning from "../../assets/background/Morning.jpg";
-import Autumn from "../../assets/background/Autumn.jpg";
-import Cottagecore from "../../assets/background/cottagecore.jpg";
-
-import AcademiaDark from "../../assets/background/dark.jpg";
-import AcademiaLight from "../../assets/background/light.jpg";
-import Y2K from "../../assets/background/Y2K.jpg";
-import CleanGirl from "../../assets/background/Clean.jpg";
-import ParisianChic from "../../assets/background/Parisian.jpg";
-import SummerBeach from "../../assets/background/Summer.jpg";
-import VanillaAesthetic from "../../assets/background/Vainilla.jpg";
-import CatVibe from "../../assets/background/Cat.jpg";
-import DogVibe from "../../assets/background/Dog.jpg";
+import Morning from "../../assets/background/Morning.avif";
+import Autumn from "../../assets/background/Autumn.avif";
+import Cottagecore from "../../assets/background/cottagecore.avif";
+import AcademiaDark from "../../assets/background/dark.avif";
+import AcademiaLight from "../../assets/background/light.avif";
+import Y2K from "../../assets/background/Y2K.avif";
+import CleanGirl from "../../assets/background/Clean.avif";
+import ParisianChic from "../../assets/background/Parisian.avif";
+import SummerBeach from "../../assets/background/Summer.avif";
+import VanillaAesthetic from "../../assets/background/Vainilla.avif";
+import CatVibe from "../../assets/background/Cat.avif";
+import DogVibe from "../../assets/background/Dog.avif";
 
 
 const Themes = {
