@@ -1,50 +1,55 @@
-.quote.Morning{
-    --color--background: rgba(8, 117, 125, 0.3); 
-    --color--texto: rgb(255, 255, 255);
+  .quote[class*=" "] {
+  --color--background: var(--Morning-bg);
+  --color--texto: var(--Morning-text);
+}
+  
+  .quote.Morning{
+    --color--background: var(--Morning-bg); 
+    --color--texto: var(--Morning-text);
   }
   .quote.Autumn {
-    --color--background: rgba(79, 28, 1, 0.5); 
-    --color--texto: rgb(255, 255, 255);
+    --color--background: var(--Autumn-bg); 
+    --color--texto: var(--Autumn-text);
   }
   .quote.Cottagecore{
-    --color--background: rgba(16, 41, 1, 0.3); 
-    --color--texto: rgb(255, 255, 255);
+    --color--background: var(--Cottagecore-bg); 
+    --color--texto: var(--Cottagecore-text);
   }
   .quote.DarkAcademia{
-    --color--background: rgba(0, 0, 0, 0.3); 
-    --color--texto: rgb(255, 255, 255);
+    --color--background: var(--DarkAcademia-bg);
+    --color--texto: var(--DarkAcademia-text); 
   }
   .quote.LightAcademia{
-    --color--background: rgba(255, 255, 255, 0.3); 
-    --color--texto: rgb(255, 255, 255);
+    --color--background: var(--LightAcademia-bg);
+    --color--texto: var(--LightAcademia-text);
   }
   .quote.Y2K{
-    --color--background: rgba(58, 113, 55, 0.3); 
-    --color--texto: rgb(255, 255, 255);
+    --color--background: var(--Y2K-bg);
+    --color--texto: var(--Y2K-text);
   }
   .quote.CleanGirl{
-    --color--background: rgba(255, 255, 255, 0.1); 
-    --color--texto: rgba(18, 18, 18, 0.4);
+    --color--background: var(--CleanGirl-bg);
+    --color--texto: var(--CleanGirl-text);
   }
   .quote.ParisianChic{
-    --color--background: rgba(224, 189, 189, 0.3); 
-    --color--texto: rgb(255, 255, 255);
+    --color--background: var(--ParisianChic-bg);
+    --color--texto: var(--ParisianChic-text);
   }
   .quote.SummerBeach{
-    --color--background: rgba(1, 98, 61, 0.3); 
-    --color--texto: rgb(255, 255, 255);
+    --color--background:var(--SummerBeach-bg);
+    --color--texto: var(--SummerBeach-text); 
   }
   .quote.VanillaAesthetic{
-    --color--background: rgba(253, 211, 166, 0.5); 
-    --color--texto: rgba(18, 18, 18, 0.6);
+    --color--background: var(--VanillaAesthetic-bg);
+    --color--texto: var(--VanillaAesthetic-text);
   }
   .quote.CatVibe{
-    --color--background: rgba(0, 0, 0, 0.5); 
-    --color--texto: rgb(255, 255, 255);
+    --color--background: var(--CatVibe-bg);
+    --color--texto: var(--CatVibe-text);
   }
   .quote.DogVibe{
-    --color--background: rgba(0, 0, 0, 0.5); 
-    --color--texto: rgb(255, 255, 255);
+    --color--background: var(--DogVibe-bg);
+    --color--texto: var(--DogVibe-text);
   }
 
 .quote{

@@ -12,3 +12,41 @@ html{
     padding: 0;
     height: 100%; 
 }
+
+:root {
+  --Morning-bg: rgba(8, 117, 125, 0.3);
+  --Morning-text: rgb(255, 255, 255);
+  
+  --Autumn-bg: rgba(79, 28, 1, 0.5);
+  --Autumn-text: rgb(255, 255, 255);
+  
+  --Cottagecore-bg: rgba(16, 41, 1, 0.3);
+  --Cottagecore-text: rgb(255, 255, 255);
+  
+  --DarkAcademia-bg: rgba(0, 0, 0, 0.3);
+  --DarkAcademia-text: rgb(255, 255, 255);
+  
+  --LightAcademia-bg: rgba(45, 43, 43, 0.3);
+  --LightAcademia-text: rgb(255, 255, 255);
+  
+  --Y2K-bg: rgba(58, 113, 55, 0.3);
+  --Y2K-text: rgb(255, 255, 255);
+  
+  --CleanGirl-bg: rgba(255, 255, 255, 0.1);
+  --CleanGirl-text: rgba(18, 18, 18, 0.4);
+  
+  --ParisianChic-bg: rgba(224, 189, 189, 0.3);
+  --ParisianChic-text: rgb(255, 255, 255);
+  
+  --SummerBeach-bg: rgba(1, 98, 61, 0.3);
+  --SummerBeach-text: rgb(255, 255, 255);
+  
+  --VanillaAesthetic-bg: rgba(253, 211, 166, 0.5);
+  --VanillaAesthetic-text: rgba(18, 18, 18, 0.6);
+  
+  --CatVibe-bg: rgba(0, 0, 0, 0.5);
+  --CatVibe-text: rgb(255, 255, 255);
+  
+  --DogVibe-bg: rgba(0, 0, 0, 0.5);
+  --DogVibe-text: rgb(255, 255, 255);
+}
