@@ -27,17 +27,22 @@ const SettingsPanel = ({
   return (
     <div className="panel">
       {/* Ícono de configuración */}
-      <SettingIcon togglePanel={togglePanel} />
+      <SettingIcon 
+        togglePanel={togglePanel} 
+        tema={tema}
+        />
       {/* Panel de configuración */}
         {isPanelOpen && (
           <div className={`menu ${tema}`}>
             <h3 className="panel-title">Controles</h3>
             <ul className="panel-options">
               <PanelItem 
+                tema={tema}
                 onToggleQuote={onToggleQuote} 
                 onToggleToDo={onToggleToDo}
                 onToggleMusic={onToggleMusic}
                 onToggleClockButtons={onToggleClockButtons}
+                
                 />
             </ul>
              <ThemeButton 

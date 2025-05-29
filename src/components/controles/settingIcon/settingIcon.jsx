@@ -1,9 +1,9 @@
 import "./SettingIcon.css";
 import { Settings } from "lucide-react";
 
-const SettingIcon = ({ togglePanel }) => {
+const SettingIcon = ({ togglePanel , tema}) => {
     return (
-        <div className="settings-icon" onClick={togglePanel}>
+        <div className={`settings ${tema}`}  onClick={togglePanel}>
             <Settings size={24} />
         </div>
     );

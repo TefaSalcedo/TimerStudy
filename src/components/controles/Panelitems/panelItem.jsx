@@ -1,6 +1,12 @@
 import "./panelItem.css";
 
-const PanelItem = ({ onToggleQuote, onToggleToDo, onToggleMusic, onToggleClockButtons }) => {
+const PanelItem = ({ 
+    onToggleQuote, 
+    onToggleToDo, 
+    onToggleMusic, 
+    onToggleClockButtons,
+    tema
+ }) => {
 
     //Array de funciones para manejar los eventos de cambio
     const FuncionesVisualización=[
@@ -29,7 +35,7 @@ const PanelItem = ({ onToggleQuote, onToggleToDo, onToggleMusic, onToggleClockBu
             <span>{funcion.name}</span>
             <label className="switch">
                 <input type="checkbox" defaultChecked onChange={funcion.onChange}/>
-                <span className="slider round"></span>
+                <span className={`slider ${tema}`}></span>
             </label>
         </li>
         ))}

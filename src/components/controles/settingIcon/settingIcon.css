@@ -1,9 +1,63 @@
-.settings-icon {
+  .settings[class*=" "] {
+  --color--background: var(--Morning-bg);
+  --color--texto: var(--Morning-text);
+}
+  
+  .settings.Morning{
+    --color--background: var(--Morning-bg); 
+    --color--texto: var(--Morning-text);
+  }
+  .settings.Autumn {
+    --color--background: var(--Autumn-bg); 
+    --color--texto: var(--Autumn-text);
+  }
+  .settings.Cottagecore{
+    --color--background: var(--Cottagecore-bg); 
+    --color--texto: var(--Cottagecore-text);
+  }
+  .settings.DarkAcademia{
+    --color--background: var(--DarkAcademia-bg);
+    --color--texto: var(--DarkAcademia-text); 
+  }
+  .settings.LightAcademia{
+    --color--background: var(--LightAcademia-bg);
+    --color--texto: var(--LightAcademia-text);
+  }
+  .settings.Y2K{
+    --color--background: var(--Y2K-bg);
+    --color--texto: var(--Y2K-text);
+  }
+  .settings.CleanGirl{
+    --color--background: var(--CleanGirl-bg);
+    --color--texto: var(--CleanGirl-text);
+  }
+  .settings.ParisianChic{
+    --color--background: var(--ParisianChic-bg);
+    --color--texto: var(--ParisianChic-text);
+  }
+  .settings.SummerBeach{
+    --color--background:var(--SummerBeach-bg);
+    --color--texto: var(--SummerBeach-text); 
+  }
+  .settings.VanillaAesthetic{
+    --color--background: var(--VanillaAesthetic-bg);
+    --color--texto: var(--VanillaAesthetic-text);
+  }
+  .settings.CatVibe{
+    --color--background: var(--CatVibe-bg);
+    --color--texto: var(--CatVibe-text);
+  }
+  .settings.DogVibe{
+    --color--background: var(--DogVibe-bg);
+    --color--texto: var(--DogVibe-text);
+  }
+
+.settings {
   position: fixed;
   bottom: 25px;
   right: 0;
-  background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
-  color: white;
+  background-color: var(--color--background); /* Sin fondo */
+  color: var(--color--texto);
   padding: 8px;
   border-radius: 8px 0 0 8px;
   cursor: pointer;
