@@ -12,3 +12,53 @@ html{
     padding: 0;
     height: 100%; 
 }
+
+:root {
+  --Morning-bg: rgba(131, 243, 251, 0);
+  --Morning-text: rgb(255, 255, 255);
+  --Morning-another: rgb(255, 255, 255);
+  
+  --Autumn-bg: rgba(246, 134, 73, 0.098);
+  --Autumn-text: rgb(255, 255, 255);
+  --Autumn-another: rgb(255, 255, 255);
+  
+  --Cottagecore-bg: rgba(159, 245, 110, 0.105);
+  --Cottagecore-text: rgb(255, 255, 255);
+  --Cottagecore-another:rgb(255, 255, 255);
+  
+  --DarkAcademia-bg: rgba(0, 0, 0, 0.3);
+  --DarkAcademia-text: rgb(255, 255, 255);
+  --DarkAcademia-another: rgb(255, 255, 255);
+  
+  --LightAcademia-bg: rgba(45, 43, 43, 0.3);
+  --LightAcademia-text: rgb(255, 255, 255);
+  --LightAcademia-another:rgb(0, 0, 0);
+  
+  --Y2K-bg: rgba(58, 113, 55, 0.3);
+  --Y2K-text: rgb(255, 255, 255);
+  --Y2K-another:rgb(255, 255, 255);
+  
+  --CleanGirl-bg: rgba(255, 255, 255, 0.1);
+  --CleanGirl-text: rgba(75, 70, 70, 0.4);
+  --CleanGirl-another:rgb(255, 255, 255);
+  
+  --ParisianChic-bg: rgb(208, 177, 177);
+  --ParisianChic-text: rgb(38, 38, 38);
+  --ParisianChic-another:rgb(255, 255, 255);
+  
+  --SummerBeach-bg: rgba(1, 98, 61, 0.3);
+  --SummerBeach-text: rgb(255, 255, 255);
+  --SummerBeach-another:rgb(255, 255, 255);
+  
+  --VanillaAesthetic-bg: rgba(253, 211, 166, 0.7);
+  --VanillaAesthetic-text: rgba(18, 18, 18, 0.927);
+  --VanillaAesthetic-another:rgb(255, 255, 255);
+  
+  --CatVibe-bg: rgba(0, 0, 0, 0.5);
+  --CatVibe-text: rgb(255, 255, 255);
+  --CatVibe-another:rgb(255, 255, 255);
+  
+  --DogVibe-bg: rgba(0, 0, 0, 0.5);
+  --DogVibe-text: rgb(255, 255, 255);
+  --DogVibe-another:rgb(255, 255, 255);
+}

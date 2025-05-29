@@ -1,74 +1,73 @@
-
-.to-do-Menu {
-  left: 10px;
-  position: fixed;
-  top: 10px;
-  z-index: 1000;
+.flip-clock {
+    color: var(--color--texto);
+    display: flex;
+    font-size: 8rem;
+    gap: 0.5rem;
+}
+.flip-unit {
+    align-items: center;
+    background-color: var(--color--background); 
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    font-weight: bold;
+    height: 11rem;
+    justify-content: center;
+    margin:10px;
+    opacity:0.7;
+    width: 11rem;
 }
 
-.container {
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  background-color: var(--color--background); 
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  height: 250px;
-  opacity: 0.8;
-  padding: 20px 20px 5px 20px;
-  width: 280px;
-  color:var(--color--texto);
-}
-
- .container[class*=" "] {
+ .flip-clock[class*=" "] {
   --color--background: var(--Morning-bg);
   --color--texto: var(--Morning-text);
-  }
+}
   
-  .container.Morning{
+  .flip-clock.Morning{
     --color--background: var(--Morning-bg); 
     --color--texto: var(--Morning-text);
   }
-  .container.Autumn {
+  .flip-clock.Autumn {
     --color--background: var(--Autumn-bg); 
     --color--texto: var(--Autumn-text);
   }
-  .container.Cottagecore{
+  .flip-clock.Cottagecore{
     --color--background: var(--Cottagecore-bg); 
     --color--texto: var(--Cottagecore-text);
   }
-  .container.DarkAcademia{
+  .flip-clock.DarkAcademia{
     --color--background: var(--DarkAcademia-bg);
     --color--texto: var(--DarkAcademia-text); 
   }
-  .container.LightAcademia{
+  .flip-clock.LightAcademia{
     --color--background: var(--LightAcademia-bg);
     --color--texto: var(--LightAcademia-text);
   }
-  .container.Y2K{
+  .flip-clock.Y2K{
     --color--background: var(--Y2K-bg);
     --color--texto: var(--Y2K-text);
   }
-  .container.CleanGirl{
+  .flip-clock.CleanGirl{
     --color--background: var(--CleanGirl-bg);
     --color--texto: var(--CleanGirl-text);
   }
-  .container.ParisianChic{
+  .flip-clock.ParisianChic{
     --color--background: var(--ParisianChic-bg);
     --color--texto: var(--ParisianChic-text);
   }
-  .container.SummerBeach{
+  .flip-clock.SummerBeach{
     --color--background:var(--SummerBeach-bg);
     --color--texto: var(--SummerBeach-text); 
   }
-  .container.VanillaAesthetic{
+  .flip-clock.VanillaAesthetic{
     --color--background: var(--VanillaAesthetic-bg);
     --color--texto: var(--VanillaAesthetic-text);
   }
-  .container.CatVibe{
+  .flip-clock.CatVibe{
     --color--background: var(--CatVibe-bg);
     --color--texto: var(--CatVibe-text);
   }
-  .container.DogVibe{
+  .flip-clock.DogVibe{
     --color--background: var(--DogVibe-bg);
     --color--texto: var(--DogVibe-text);
   }

@@ -1,74 +1,75 @@
 
-.to-do-Menu {
-  left: 10px;
-  position: fixed;
-  top: 10px;
-  z-index: 1000;
+.contenedorBotones{
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container {
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  background-color: var(--color--background); 
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  height: 250px;
-  opacity: 0.8;
-  padding: 20px 20px 5px 20px;
-  width: 280px;
-  color:var(--color--texto);
-}
 
- .container[class*=" "] {
+.boton-option {
+    background-color: var(--color--background);
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: var(--color--texto);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 1rem;
+    opacity:0.7;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+}
+  .boton-option [class*=" "] {
   --color--background: var(--Morning-bg);
   --color--texto: var(--Morning-text);
-  }
+}
   
-  .container.Morning{
+  .boton-option.Morning{
     --color--background: var(--Morning-bg); 
     --color--texto: var(--Morning-text);
   }
-  .container.Autumn {
+  .boton-option.Autumn {
     --color--background: var(--Autumn-bg); 
     --color--texto: var(--Autumn-text);
   }
-  .container.Cottagecore{
+  .boton-option.Cottagecore{
     --color--background: var(--Cottagecore-bg); 
     --color--texto: var(--Cottagecore-text);
   }
-  .container.DarkAcademia{
+  .boton-option.DarkAcademia{
     --color--background: var(--DarkAcademia-bg);
     --color--texto: var(--DarkAcademia-text); 
   }
-  .container.LightAcademia{
+  .boton-option.LightAcademia{
     --color--background: var(--LightAcademia-bg);
     --color--texto: var(--LightAcademia-text);
   }
-  .container.Y2K{
+  .boton-option.Y2K{
     --color--background: var(--Y2K-bg);
     --color--texto: var(--Y2K-text);
   }
-  .container.CleanGirl{
+  .boton-option.CleanGirl{
     --color--background: var(--CleanGirl-bg);
     --color--texto: var(--CleanGirl-text);
   }
-  .container.ParisianChic{
+  .boton-option.ParisianChic{
     --color--background: var(--ParisianChic-bg);
     --color--texto: var(--ParisianChic-text);
   }
-  .container.SummerBeach{
+  .boton-option.SummerBeach{
     --color--background:var(--SummerBeach-bg);
     --color--texto: var(--SummerBeach-text); 
   }
-  .container.VanillaAesthetic{
+  .boton-option.VanillaAesthetic{
     --color--background: var(--VanillaAesthetic-bg);
     --color--texto: var(--VanillaAesthetic-text);
   }
-  .container.CatVibe{
+  .boton-option.CatVibe{
     --color--background: var(--CatVibe-bg);
     --color--texto: var(--CatVibe-text);
   }
-  .container.DogVibe{
+  .boton-option.DogVibe{
     --color--background: var(--DogVibe-bg);
     --color--texto: var(--DogVibe-text);
   }

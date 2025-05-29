@@ -1,74 +1,64 @@
-
-.to-do-Menu {
-  left: 10px;
-  position: fixed;
-  top: 10px;
-  z-index: 1000;
-}
-
-.container {
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  background-color: var(--color--background); 
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  height: 250px;
-  opacity: 0.8;
-  padding: 20px 20px 5px 20px;
-  width: 280px;
-  color:var(--color--texto);
-}
-
- .container[class*=" "] {
+  .settings[class*=" "] {
   --color--background: var(--Morning-bg);
   --color--texto: var(--Morning-text);
-  }
+}
   
-  .container.Morning{
+  .settings.Morning{
     --color--background: var(--Morning-bg); 
     --color--texto: var(--Morning-text);
   }
-  .container.Autumn {
+  .settings.Autumn {
     --color--background: var(--Autumn-bg); 
     --color--texto: var(--Autumn-text);
   }
-  .container.Cottagecore{
+  .settings.Cottagecore{
     --color--background: var(--Cottagecore-bg); 
     --color--texto: var(--Cottagecore-text);
   }
-  .container.DarkAcademia{
+  .settings.DarkAcademia{
     --color--background: var(--DarkAcademia-bg);
     --color--texto: var(--DarkAcademia-text); 
   }
-  .container.LightAcademia{
+  .settings.LightAcademia{
     --color--background: var(--LightAcademia-bg);
     --color--texto: var(--LightAcademia-text);
   }
-  .container.Y2K{
+  .settings.Y2K{
     --color--background: var(--Y2K-bg);
     --color--texto: var(--Y2K-text);
   }
-  .container.CleanGirl{
+  .settings.CleanGirl{
     --color--background: var(--CleanGirl-bg);
     --color--texto: var(--CleanGirl-text);
   }
-  .container.ParisianChic{
+  .settings.ParisianChic{
     --color--background: var(--ParisianChic-bg);
     --color--texto: var(--ParisianChic-text);
   }
-  .container.SummerBeach{
+  .settings.SummerBeach{
     --color--background:var(--SummerBeach-bg);
     --color--texto: var(--SummerBeach-text); 
   }
-  .container.VanillaAesthetic{
+  .settings.VanillaAesthetic{
     --color--background: var(--VanillaAesthetic-bg);
     --color--texto: var(--VanillaAesthetic-text);
   }
-  .container.CatVibe{
+  .settings.CatVibe{
     --color--background: var(--CatVibe-bg);
     --color--texto: var(--CatVibe-text);
   }
-  .container.DogVibe{
+  .settings.DogVibe{
     --color--background: var(--DogVibe-bg);
     --color--texto: var(--DogVibe-text);
   }
+
+.settings {
+  position: fixed;
+  bottom: 25px;
+  right: 0;
+  background-color: var(--color--background); /* Sin fondo */
+  color: var(--color--texto);
+  padding: 8px;
+  border-radius: 8px 0 0 8px;
+  cursor: pointer;
+}

@@ -1,74 +1,76 @@
+.container ol {
 
-.to-do-Menu {
-  left: 10px;
-  position: fixed;
-  top: 10px;
-  z-index: 1000;
+  -ms-overflow-style: none;
+  list-style: armenian;
+  margin: 1.7rem 0 0 0;
+  max-height: 210px;
+  overflow-y: auto;
+  padding: 0;
+  scrollbar-width: none;
 }
 
-.container {
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  background-color: var(--color--background); 
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  height: 250px;
-  opacity: 0.8;
-  padding: 20px 20px 5px 20px;
-  width: 280px;
-  color:var(--color--texto);
+.container ol::-webkit-scrollbar {
+  display: none; 
 }
 
- .container[class*=" "] {
+.tareaContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.tareaContainer[class*=" "] {
   --color--background: var(--Morning-bg);
   --color--texto: var(--Morning-text);
   }
   
-  .container.Morning{
+  .tareaContainer.Morning{
     --color--background: var(--Morning-bg); 
     --color--texto: var(--Morning-text);
   }
-  .container.Autumn {
+  .tareaContainer.Autumn {
     --color--background: var(--Autumn-bg); 
     --color--texto: var(--Autumn-text);
   }
-  .container.Cottagecore{
+  .tareaContainer.Cottagecore{
     --color--background: var(--Cottagecore-bg); 
     --color--texto: var(--Cottagecore-text);
   }
-  .container.DarkAcademia{
+  .tareaContainer.DarkAcademia{
     --color--background: var(--DarkAcademia-bg);
     --color--texto: var(--DarkAcademia-text); 
   }
-  .container.LightAcademia{
+  .tareaContainer.LightAcademia{
     --color--background: var(--LightAcademia-bg);
     --color--texto: var(--LightAcademia-text);
   }
-  .container.Y2K{
+  .tareaContainer.Y2K{
     --color--background: var(--Y2K-bg);
     --color--texto: var(--Y2K-text);
   }
-  .container.CleanGirl{
+  .tareaContainer.CleanGirl{
     --color--background: var(--CleanGirl-bg);
     --color--texto: var(--CleanGirl-text);
   }
-  .container.ParisianChic{
+  .tareaContainer.ParisianChic{
     --color--background: var(--ParisianChic-bg);
     --color--texto: var(--ParisianChic-text);
   }
-  .container.SummerBeach{
+  .tareaContainer.SummerBeach{
     --color--background:var(--SummerBeach-bg);
     --color--texto: var(--SummerBeach-text); 
   }
-  .container.VanillaAesthetic{
+  .tareaContainer.VanillaAesthetic{
     --color--background: var(--VanillaAesthetic-bg);
     --color--texto: var(--VanillaAesthetic-text);
   }
-  .container.CatVibe{
+  .tareaContainer.CatVibe{
     --color--background: var(--CatVibe-bg);
     --color--texto: var(--CatVibe-text);
   }
-  .container.DogVibe{
+  .tareaContainer.DogVibe{
     --color--background: var(--DogVibe-bg);
     --color--texto: var(--DogVibe-text);
   }

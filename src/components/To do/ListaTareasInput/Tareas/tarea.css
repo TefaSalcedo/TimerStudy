@@ -1,0 +1,21 @@
+li {
+/*Box model stuff*/
+  width: 80%;
+  height: 100%;
+  border-radius: 5px;
+/*Typography stuff*/
+  font-size: 18px;
+  text-align: left;
+  text-overflow: ellipsis;
+  text-overflow: ellipsis;
+/*Miscellaneous*/
+  overflow: hidden;
+  overflow: hidden;
+  white-space: wrap;
+}
+
+li.completed {
+/*Typography stuff*/
+  text-decoration: line-through;
+  
+}

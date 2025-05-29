@@ -1,74 +1,77 @@
-
-.to-do-Menu {
-  left: 10px;
-  position: fixed;
-  top: 10px;
-  z-index: 1000;
+.theme-container{
+  display:flex;
+  flex-direction: column;
+  /* background-color: black; */
 }
 
-.container {
+select option{
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  background-color: var(--color--background); 
-  border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  height: 250px;
-  opacity: 0.8;
-  padding: 20px 20px 5px 20px;
-  width: 280px;
+  color: black;
+  background-color: rgba(87, 87, 87, 0.214);
+
+}
+.theme-select{
+  background-color: var(--color--background);
   color:var(--color--texto);
+  padding:5px;
+  width: 50%;
+  border-radius: 5px;
 }
 
- .container[class*=" "] {
+.boton-estilo :hover{
+  background-color:var(--color--background) ;
+}
+.theme-select[class*=" "] {
   --color--background: var(--Morning-bg);
   --color--texto: var(--Morning-text);
-  }
+}
   
-  .container.Morning{
+  .theme-select.Morning{
     --color--background: var(--Morning-bg); 
     --color--texto: var(--Morning-text);
   }
-  .container.Autumn {
+  .theme-select.Autumn {
     --color--background: var(--Autumn-bg); 
     --color--texto: var(--Autumn-text);
   }
-  .container.Cottagecore{
+  .theme-select.Cottagecore{
     --color--background: var(--Cottagecore-bg); 
     --color--texto: var(--Cottagecore-text);
   }
-  .container.DarkAcademia{
+  .theme-select.DarkAcademia{
     --color--background: var(--DarkAcademia-bg);
     --color--texto: var(--DarkAcademia-text); 
   }
-  .container.LightAcademia{
+  .theme-select.LightAcademia{
     --color--background: var(--LightAcademia-bg);
     --color--texto: var(--LightAcademia-text);
   }
-  .container.Y2K{
+  .theme-select.Y2K{
     --color--background: var(--Y2K-bg);
     --color--texto: var(--Y2K-text);
   }
-  .container.CleanGirl{
+  .theme-select.CleanGirl{
     --color--background: var(--CleanGirl-bg);
     --color--texto: var(--CleanGirl-text);
   }
-  .container.ParisianChic{
+  .theme-select.ParisianChic{
     --color--background: var(--ParisianChic-bg);
     --color--texto: var(--ParisianChic-text);
   }
-  .container.SummerBeach{
+  .theme-select.SummerBeach{
     --color--background:var(--SummerBeach-bg);
     --color--texto: var(--SummerBeach-text); 
   }
-  .container.VanillaAesthetic{
+  .theme-select.VanillaAesthetic{
     --color--background: var(--VanillaAesthetic-bg);
     --color--texto: var(--VanillaAesthetic-text);
   }
-  .container.CatVibe{
+  .theme-select.CatVibe{
     --color--background: var(--CatVibe-bg);
     --color--texto: var(--CatVibe-text);
   }
-  .container.DogVibe{
+  .theme-select.DogVibe{
     --color--background: var(--DogVibe-bg);
     --color--texto: var(--DogVibe-text);
   }

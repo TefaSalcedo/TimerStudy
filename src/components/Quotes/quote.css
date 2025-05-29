@@ -1,26 +1,89 @@
-.quote-container {
-    margin-top: 10px;
-    padding: 10px;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-    border-radius: 5px;
-    width: 70%;
-    background-color: rgba(55, 65, 81, 0.8); /* Sin fondo */
+/* {`quote ${tema}`} */
+
+.quote{
+    background-color: var(--color--background); 
+    border-radius: 2px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction:column; 
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
     opacity:0.7;
+    padding: 10px;
+    position: relative ;
+    text-align: center;
+    width: 600px; 
+
 }
   .author {
+    color:var(--color--texto);
     font-size: 12px;
     font-weight: bold;
     margin-top: 5px;
-    color:white;
   }
   p{
+    align-items: center;
+    color:var(--color--texto);
     font-size: 1.5rem;
     font-weight:lighter;
-    color:rgb(255, 255, 255);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow-wrap: anywhere; /* también ayuda en casos extremos */
+    overflow-wrap: anywhere; /* también ayuda en casos extremos */
+    white-space: normal;   /* permite saltos de línea normales */
+    white-space: normal;   /* permite saltos de línea normales */
+    word-wrap: break-word; /* asegura que las palabras largas se partan si es necesario */
+    word-wrap: break-word; /* asegura que las palabras largas se partan si es necesario */
   }
   
+  .quote[class*=" "] {
+  --color--background: var(--Morning-bg);
+  --color--texto: var(--Morning-text);
+  }
+  
+  .quote.Morning{
+    --color--background: var(--Morning-bg); 
+    --color--texto: var(--Morning-text);
+  }
+  .quote.Autumn {
+    --color--background: var(--Autumn-bg); 
+    --color--texto: var(--Autumn-text);
+  }
+  .quote.Cottagecore{
+    --color--background: var(--Cottagecore-bg); 
+    --color--texto: var(--Cottagecore-text);
+  }
+  .quote.DarkAcademia{
+    --color--background: var(--DarkAcademia-bg);
+    --color--texto: var(--DarkAcademia-text); 
+  }
+  .quote.LightAcademia{
+    --color--background: var(--LightAcademia-bg);
+    --color--texto: var(--LightAcademia-text);
+  }
+  .quote.Y2K{
+    --color--background: var(--Y2K-bg);
+    --color--texto: var(--Y2K-text);
+  }
+  .quote.CleanGirl{
+    --color--background: var(--CleanGirl-bg);
+    --color--texto: var(--CleanGirl-text);
+  }
+  .quote.ParisianChic{
+    --color--background: var(--ParisianChic-bg);
+    --color--texto: var(--ParisianChic-text);
+  }
+  .quote.SummerBeach{
+    --color--background:var(--SummerBeach-bg);
+    --color--texto: var(--SummerBeach-text); 
+  }
+  .quote.VanillaAesthetic{
+    --color--background: var(--VanillaAesthetic-bg);
+    --color--texto: var(--VanillaAesthetic-text);
+  }
+  .quote.CatVibe{
+    --color--background: var(--CatVibe-bg);
+    --color--texto: var(--CatVibe-text);
+  }
+  .quote.DogVibe{
+    --color--background: var(--DogVibe-bg);
+    --color--texto: var(--DogVibe-text);
+  }

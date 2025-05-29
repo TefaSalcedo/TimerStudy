@@ -1,33 +1,35 @@
 import React, { useState, useEffect } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faList } from '@fortawesome/free-solid-svg-icons'; // Importar el ícono de lista|
-import { faPlus } from '@fortawesome/free-solid-svg-icons'; // Importar el ícono de añadir
-import { faTrash } from '@fortawesome/free-solid-svg-icons'; // Importar el ícono de eliminar
-import  EmojiButton from "../emoji/emojis.jsx";
+import ListadeTareasInput from "./ListaTareasInput/ListaTareasInput.jsx"; 
+import FormInput from "./Input to do/FormInput.jsx";
+import MenuButton from "./MenuButton/MenuButton.jsx";
 import "../appTime.css";
 import "./toDo.css";
 
-export default function MenuEditable() {
-  const [showMenu, setShowMenu] = useState(false);
-  const [tareas, setTareas] = React.useState([]);
-    const [tarea, setTarea] = React.useState('');
+
+export default function MenuEditable({tema}) {
+    const [showMenu, setShowMenu] = useState(false);
+    const [tareas, setTareas] = React.useState([]);
+    const [tarea, setTarea] = React.useState("");
 
     const agregarClick = (e) => {
+        debugger;
+        console.log("Click agregar")
         e.preventDefault();
-        if (tarea.trim() === '') return;
-            const nuevaTarea={
-                id: Date.now(),
-                nombre: tarea,
-                completada:false,
-            }
-            setTareas([...tareas, nuevaTarea]);
-            setTarea('');
-    }
+        if (tarea.trim() === "") return;
+        const nuevaTarea = {
+            id: Date.now(),
+            nombre: tarea,
+            completada: false,
+        };
+        setTareas([...tareas, nuevaTarea]);
+        setTarea("");
+
+    };
 
     const eliminarClick = (index) => {
         const nuevasTareas = tareas.filter((_, i) => i !== index);
         setTareas(nuevasTareas);
-    }
+    };
 
     const marcarCompletada = (id) => {
         const nuevasTareas = tareas.map((tarea) => {
@@ -37,66 +39,46 @@ export default function MenuEditable() {
             return tarea;
         });
         setTareas(nuevasTareas);
-    }
-    
+    };
+
     useEffect(() => {
-        const tareasGuardadas = JSON.parse(localStorage.getItem('tareas'));
+        const tareasGuardadas = JSON.parse(localStorage.getItem("tareas"));
         if (tareasGuardadas) {
             setTareas(tareasGuardadas);
         }
     }, []);
 
     useEffect(() => {
-        localStorage.setItem('tareas', JSON.stringify(tareas));
+        localStorage.setItem("tareas", JSON.stringify(tareas));
     }, [tareas]);
 
-  return (
-    <div className="to-do-Menu">
-      {/* Botón Hamburguesa */}
-      <button
-        className="hamburger-button"
-        onClick={() => setShowMenu(!showMenu)}
-      >
-        <FontAwesomeIcon icon={faList} />
-      </button>
+    return (
+        <div className={`to-do-Menu`}>
+            {/* Botón Hamburguesa */}
+            <MenuButton 
+                showMenu={showMenu} 
+                setShowMenu={setShowMenu} 
+                tema={tema}
+                />
+            {/* Menú Desplegable */}
 
-      {/* Menú Desplegable */}
-      {showMenu && (
-        <div className="container">
-        <form>
-            <div>
-            <input 
-                type="text" 
-                placeholder="Escribe una tarea" 
-                value={tarea} 
-                onChange={(e)=>setTarea(e.target.value)}
-            />
-            <EmojiButton onSelect={emojiObj => setTarea(tarea + emojiObj.emoji)} />
-            </div>
-            <button type="submit" onClick={agregarClick}>
-                <FontAwesomeIcon icon={faPlus} />
-            </button>
-        </form>
-        <ol>
-            {tareas.map((tarea, tareaId)=>(
-                <div className="tareaContainer" key={tarea.id}>  
-                    <li 
-                        onClick={() => marcarCompletada(tarea.id)}
-                        style={{ textDecoration: tarea.completada ? 'line-through' : 'none' }}
-                        >
-                        {tarea.nombre}
-                    </li>
-                    <button 
-                        onClick={() => eliminarClick(tareaId)}
-                        className={`botonEliminar ${tarea.completada ? 'completada' : ''}`}
-                        >
-                        <FontAwesomeIcon icon={faTrash} />
-                        </button>
+            {showMenu && (
+                <div className={`container`}>
+                    <FormInput
+                        setTarea={setTarea}
+                        tarea={tarea}
+                        agregarClick={agregarClick}
+                        tema={tema}
+                    />
+                    <ListadeTareasInput
+                        tareas={tareas}
+                        marcarCompletada={marcarCompletada}
+                        eliminarClick={eliminarClick}
+                        tema={tema}
+                    />
                 </div>
-            ))}
-        </ol>
-    </div>
-      )}
-    </div>
-  );
+            )}
+            
+        </div>
+    );
 }
