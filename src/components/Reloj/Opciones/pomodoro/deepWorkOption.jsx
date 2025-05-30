@@ -1,8 +1,9 @@
 import React from "react";
-import "./pom.css";
-function PomodoroOptions({
-  startPomodoro,
-  pausePomodoro,
+
+
+function DeepWorkOptions({
+  startDeepWork,
+  pauseDeepWork,
   show,
   inputValue,
   onInputChange,
@@ -13,7 +14,6 @@ function PomodoroOptions({
   breakMin,
   breakMax,
 }) {
-
   if (!show) return null;
   return (
     <div className="container-timer">
@@ -36,11 +36,12 @@ function PomodoroOptions({
         onChange={onBreakChange}
         style={{ width: 60, marginLeft: 8 }}
       />
+
       <div className="botones">
-        <button id="startPomodoro" onClick={startPomodoro}>
+        <button id="startDeepWork" onClick={startDeepWork}>
           Start
         </button>
-        <button id="pausePomodoro" onClick={pausePomodoro}>
+        <button id="pauseDeepWork" onClick={pauseDeepWork}>
           Pause
         </button>
       </div>
@@ -48,4 +49,4 @@ function PomodoroOptions({
   );
 }
 
-export default PomodoroOptions;
+export default DeepWorkOptions;

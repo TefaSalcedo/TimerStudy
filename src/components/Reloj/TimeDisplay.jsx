@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TimeOptions from "./Opciones/timeOption.jsx";
 import PomodoroOptions from "./Opciones/pomodoro/pomodoro.jsx";
-import DeepWorkOptions from "./Opciones/deepWork/deepWorkOption.jsx";
+import DeepWorkOptions from "./Opciones/pomodoro/deepWorkOption.jsx";
 import AppClock from "./appClock/appClock.jsx";
 import useTimeManager from "./ManageClock.js";
 import "./TimeDisplay.css";
@@ -9,11 +9,13 @@ import "./TimeDisplay.css";
 function TimeDisplay({showClockButtons, tema}) {
   const [isRealTime, setIsRealTime] = useState(true);
   const [timerMode, setTimerMode] = useState("none");
-  const [pomodoroMinutes, setPomodoroMinutes] = useState(0.25);
-  const [deepWorkMinutes, setDeepWorkMinutes] = useState(0.25);
-  const [breakMinutes, setBreakMinutes] = useState(0.05);;
   const [showDeepWorkOptions, setShowDeepWorkOptions] = useState(false);
   const [showPomodoroOptions, setShowPomodoroOptions] = useState(false);
+
+  const [pomodoroMinutes, setPomodoroMinutes] = useState(25);
+  const [deepWorkMinutes, setDeepWorkMinutes] = useState(100);
+  const [breakMinutes, setBreakMinutes] = useState(10);
+
 
   const {
     hours,
@@ -105,7 +107,7 @@ useEffect(() => {
   };
 
   return (
-    <div className="time-container">
+    <>
       <div className="app-clock">
         <AppClock 
           hours={hours} 
@@ -124,35 +126,32 @@ useEffect(() => {
           />}
       </div>
 
-      {/* 
-      <PomodoroOptions
-        startPomodoro={startCountdown}
-        pausePomodoro={pauseCountdown}
-        min={0}
-        max={44}
-        show={showPomodoroOptions}
-        inputValue={pomodoroMinutes}
-        onInputChange={(e) => handleInput(e, 1, 45, setPomodoroMinutes, setBreakMinutes, breakMinutes)}
-        breakValue={breakMinutes}
-        onBreakChange={(e) => handleInput(e, 0,20, setBreakMinutes)}
-        tema={tema}
-      />
-       
-      <DeepWorkOptions
-        oneHour={() => setTimer(60)}
-        oneHourAndHalf={() => setTimer(90)}
-        startDeepWork={startCountdown}
-        pauseDeepWork={pauseCountdown}
-        show={showDeepWorkOptions}
-        inputValue={deepWorkMinutes}
-        onInputChange={(e) => handleInput(e, 45, 200, setDeepWorkMinutes, setBreakMinutes, breakMinutes)}
-        breakValue={breakMinutes}
-        onBreakChange={(e) => handleInput(e, 1, deepWorkMinutes - 1, setBreakMinutes)}
-        tema={tema}
-      />
-      */}
-      
-    </div>
+        <PomodoroOptions
+          startPomodoro={startCountdown}
+          pausePomodoro={pauseCountdown}
+          min={2}
+          max={44}
+          show={showPomodoroOptions}
+          inputValue={pomodoroMinutes}
+          onInputChange={(e) => handleInput(e, 2, 45, setPomodoroMinutes, setBreakMinutes, breakMinutes)}
+          breakValue={breakMinutes}
+          onBreakChange={(e) => handleInput(e, 1, pomodoroMinutes - 2, setBreakMinutes)}
+          tema={tema}
+        />
+        
+        <DeepWorkOptions
+          startDeepWork={startCountdown}
+          pauseDeepWork={pauseCountdown}
+          min={45}
+          max={200}
+          show={showDeepWorkOptions}
+          inputValue={deepWorkMinutes}
+          onInputChange={(e) => handleInput(e, 45, 200, setDeepWorkMinutes, setBreakMinutes, breakMinutes)}
+          breakValue={breakMinutes}
+          onBreakChange={(e) => handleInput(e, 1, deepWorkMinutes - 2, setBreakMinutes)}
+          tema={tema}
+        />
+    </>
   );
 }
 

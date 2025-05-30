@@ -19,6 +19,8 @@ function TimeComponent() {
 
   const [tema, setTema] = useState("Morning");
 
+
+
   // useEffect(() => {
   //   console.log("Tema seleccionado:", tema);
   //   console.log("Video ID:", Themes[tema]?.videoId);
@@ -47,8 +49,8 @@ function TimeComponent() {
           />} 
       </div>
 
-      <Draggable axis="y">
-        <div className="app-center">
+      {/* <Draggable axis="y"> */}
+          <div> 
           {/* Contenedor para time*/}
           <TimeDisplay 
             showClockButtons={showClockButtons} 
@@ -60,7 +62,7 @@ function TimeComponent() {
             tema={tema} 
             />}
         </div>
-      </Draggable>
+      {/* </Draggable> */}
 
       <div className="app-rigth">
         {/* Contenedor para las notificaciones */}

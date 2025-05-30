@@ -9,7 +9,7 @@ const PanelItem = ({
  }) => {
 
     //Array de funciones para manejar los eventos de cambio
-    const FuncionesVisualización=[
+    const FuncionesVisualizacion=[
         {
         name: "Quote",
         onChange: onToggleQuote
@@ -30,7 +30,7 @@ const PanelItem = ({
 
   return (
     <>
-        {FuncionesVisualización.map((funcion, index) => (
+        {FuncionesVisualizacion.map((funcion, index) => (
         <li className="panel-item" key={index+ funcion.name}>
             <span>{funcion.name}</span>
             <label className="switch">

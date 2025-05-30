@@ -5,7 +5,7 @@ export async function GetQuote (){
             ? '/api/random'
             : 'https://zenquotes.io/api/random';
             
-        const response = await fetch('/api/random');
+        const response = await fetch(url);
         const data = await response.json();
         console.log(data);
         return {
