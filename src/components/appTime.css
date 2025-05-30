@@ -1,7 +1,6 @@
 /* Estilos para el componente appTime
 APP DISPLAY */
 body, .app-container{
-    display: fixed;
     top:0;
     width: 100vw;
     height: 100vh;
@@ -27,14 +26,15 @@ body, .app-container{
     z-index: 100;
 
 }
-.app-rigth{
-    position:fixed;
+
+/* .app-rigth{
     top: 0;
     right:0;
     height: 100vh;
     display: flex;
     z-index: 100;
-}
+  
+} */
 .app-center{
     display:flex;
     align-self: center;

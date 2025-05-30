@@ -17,6 +17,7 @@
   padding: 20px 20px 5px 20px;
   width: 280px;
   color:var(--color--texto);
+
 }
 
  .container[class*=" "] {

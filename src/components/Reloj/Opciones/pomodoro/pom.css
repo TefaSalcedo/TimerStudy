@@ -1,0 +1,31 @@
+.container-timer{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:16px;
+    gap:5px;
+    height: auto;
+    position: absolute;
+    right:1px;
+    top:100px;
+    width: auto;
+}
+
+.botones{
+    align-self: center;
+    margin-top: 5px;
+}
+.botones button{
+    border: 1px gray solid;
+    margin:5px;
+    width:100px;
+}
+
+
+.container-timer input{
+    background-color: none;
+    border-radius: 5px;
+    border: 1px gray solid;
+    opacity: 0.5;
+}
