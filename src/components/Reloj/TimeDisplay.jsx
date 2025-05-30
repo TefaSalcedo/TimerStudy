@@ -124,6 +124,7 @@ useEffect(() => {
           />}
       </div>
 
+      {/* 
       <PomodoroOptions
         startPomodoro={startCountdown}
         pausePomodoro={pauseCountdown}
@@ -135,9 +136,8 @@ useEffect(() => {
         breakValue={breakMinutes}
         onBreakChange={(e) => handleInput(e, 0,20, setBreakMinutes)}
         tema={tema}
-    
       />
-      
+       
       <DeepWorkOptions
         oneHour={() => setTimer(60)}
         oneHourAndHalf={() => setTimer(90)}
@@ -150,7 +150,7 @@ useEffect(() => {
         onBreakChange={(e) => handleInput(e, 1, deepWorkMinutes - 1, setBreakMinutes)}
         tema={tema}
       />
-      
+      */}
       
     </div>
   );
